@@ -1,6 +1,9 @@
 @extends('front.public.master')
 @section('style')
     <style>
+        #services{
+            background-color: #f5f5f5;
+        }
         @media screen and (min-width: 768px) {
             #carousel-example-generic{
                 width: 100%;
@@ -37,7 +40,7 @@
                 top: 50%;
                 left: 50%;
                 margin-left: -110px;
-                margin-top: -110px;
+                margin-top: -130px;
                 /*background-color: rgba(255, 255, 255, 1);*/
                 padding: 40px 40px;
             }
@@ -51,6 +54,38 @@
             .glyphicon{
                 color: white;
             }
+        }
+        /*service*/
+        .index-row {
+            padding: 50px 0;
+        }
+        .service-item{
+            -webkit-transition: all 0.225s ease-in-out;
+            -moz-transition: all 0.225s ease-in-out;
+            -o-transition: all 0.225s ease-in-out;
+            transition: all 0.225s ease-in-out;
+            background-color: #fafafa;
+            border: 1px solid #389bfa;
+            padding: 10px;
+            color:#777;
+            margin-top: 20px;
+        }
+        .service-item:hover,
+        .service-item:focus{
+            background-color: #389bfa;
+            border: 1px solid #389bfa;
+            color: #faf8f9;
+        }
+        .service-item p{
+            margin: 20px auto;
+            width: 90%;
+        }
+        .service-item .title{
+            border-bottom:1px solid #389bfa ;
+        }
+        .service-item:hover>.title,
+        .service-item:focus>.title{
+            border-bottom:1px solid #fafafa ;
         }
     </style>
 @endsection
@@ -88,10 +123,126 @@
                 <p>领域</p>
                 <a href="#services" class="scrollto"><p><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></p></a>
             </div>
-
         </div>
     </div>
     {{--手机封面结束--}}
+    {{--首页业务模块--}}
+    <div class="index-row" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="h1">专业领域</h2>
+
+                    <p style="margin:0 auto;width:80px;border-bottom: 2px solid #389bfa"></p>
+
+                    <h2>
+                        <small>每一份个案????????，每一位申请人都应该被认真对待。</small>
+                    </h2>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>商品房买卖合同纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>二手房买卖纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>房产继承纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>期房买卖纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>租赁合同纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>婚姻共有房产分割</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>居间合同纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>房屋买卖纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="col-sm-12 service-item text-center">
+                        <div class="col-sm-12 title">
+                            <h3>物业合同纠纷</h3>
+                        </div>
+                        <div class="col-sm-12 title-describe">
+                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
+                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--首页业务模块结束--}}
+
 @endsection
 
 

@@ -17,7 +17,7 @@
 <body>
     @include('front.public.header')
     @yield('content')
-    {{--@include('front.public.footer')--}}
+    @include('front.public.footer')
     @yield('script')
 </body>
 </html>
