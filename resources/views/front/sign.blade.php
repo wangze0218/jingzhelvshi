@@ -76,7 +76,7 @@
         <div class="container">
                 <div class="row sing_bg text-center">
                     <a href="#">
-                        <img src="https://console.zaarapp.com/assets/images/Logo.png" alt="logo">
+                        <img src="/jingzhefangchanlvshi.png" alt="logo">
                     </a>
                 </div>
                 <div class="row">
