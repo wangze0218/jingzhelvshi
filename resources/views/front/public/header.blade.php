@@ -6,16 +6,14 @@
         color: #333;
         background-color: #fff;
     }
-    #header{
-        background: white;
-    }
     #header .navbar-default {
         border: 0;
         margin-bottom: 0;
         border-bottom: 2px solid #0ba1e4;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        background-color: rgba(255,255,255,0.9);
+        /*background-color: rgba(255,255,255,0.9);*/
+        background-color: #FFFFFF;
     }
     #header .navbar-default .navbar-nav>.active>a,
     #header .navbar-default .navbar-nav>li>a:hover,
