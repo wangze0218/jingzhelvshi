@@ -1,15 +1,17 @@
 @extends('front.public.master')
 @section('style')
     <style>
-        #services{
-            background-color: #f5f5f5;
-        }
+
         @media screen and (min-width: 768px) {
+            #services{
+                background-color: #f5f5f5;
+                padding: 150px 0px;
+            }
             #carousel-example-generic{
                 width: 100%;
                 height: 540px;
                 overflow: hidden;
-                margin-top: 82px;
+                margin-top: 80px;
             }
             #carousel-example-generic img{
                 /*width: 100%;*/
@@ -21,6 +23,10 @@
 
         }
         @media (max-width: 767px) {
+            #services{
+                background-color: #f5f5f5;
+                padding: 50px 0px;
+            }
             #carousel-example-generic{
                 display: none;
             }
@@ -65,7 +71,7 @@
             -o-transition: all 0.225s ease-in-out;
             transition: all 0.225s ease-in-out;
             background-color: #fafafa;
-            border: 1px solid #389bfa;
+            /*border: 1px solid #389bfa;*/
             padding: 10px;
             color:#777;
             margin-top: 20px;
@@ -86,6 +92,9 @@
         .service-item:hover>.title,
         .service-item:focus>.title{
             border-bottom:1px solid #fafafa ;
+        }
+        .service-title{
+            margin-bottom: 50px;
         }
     </style>
 @endsection
@@ -130,7 +139,7 @@
     <div class="index-row" id="services">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 text-center">
+                <div class="col-sm-12 text-center service-title">
                     <h2 class="h1">专业领域</h2>
 
                     <p style="margin:0 auto;width:80px;border-bottom: 2px solid #389bfa"></p>
@@ -139,8 +148,8 @@
                         <small>每一份个案????????，每一位申请人都应该被认真对待。</small>
                     </h2>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>商品房买卖合同纠纷</h3>
                         </div>
@@ -150,8 +159,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>二手房买卖纠纷</h3>
                         </div>
@@ -161,8 +170,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>房产继承纠纷</h3>
                         </div>
@@ -172,8 +181,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>期房买卖纠纷</h3>
                         </div>
@@ -183,8 +192,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>租赁合同纠纷</h3>
                         </div>
@@ -194,8 +203,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>婚姻共有房产分割</h3>
                         </div>
@@ -205,8 +214,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>居间合同纠纷</h3>
                         </div>
@@ -216,8 +225,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>房屋买卖纠纷</h3>
                         </div>
@@ -227,8 +236,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="col-sm-12 service-item text-center">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="col-sm-12 service-item shadow text-center">
                         <div class="col-sm-12 title">
                             <h3>物业合同纠纷</h3>
                         </div>

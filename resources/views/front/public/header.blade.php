@@ -9,7 +9,7 @@
     #header .navbar-default {
         border: 0;
         margin-bottom: 0;
-        border-bottom: 2px solid #0ba1e4;
+        /*border-bottom: 2px solid #0ba1e4;*/
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         /*background-color: rgba(255,255,255,0.9);*/
@@ -35,16 +35,22 @@
             border-radius: 0;
             padding: 15px 0;
         }
-        .container{
-            width: 970px;
+        /*.navbar-header{*/
+            /*width: 24%;*/
+        /*}*/
+        /*.navbar-collapse{*/
+            /*width: 56%;*/
+        /*}*/
+        .navbar-login{
+            margin-top: 3px;
         }
     }
 </style>
 <div id="header">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top shadow">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header" style="background-color: white;">
+            <div class="navbar-header col-sm-3" style="background-color: white;">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -56,7 +62,7 @@
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse col-sm-7" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="">首页 <span class="sr-only">(current)</span></a><p class="line-top hidden-xs"></p></li>
                     <li class=""><a href="">专业领域</a></li>
@@ -66,6 +72,11 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+            <div class="navbar-login col-sm-2">
+                <ul class="nav pull-right hidden-xs">
+                    <li><a href="/sign_in" class="btn btn-default">登陆</a></li>
+                </ul>
+            </div>
         </div>
         <!-- /.container-fluid -->
     </nav>

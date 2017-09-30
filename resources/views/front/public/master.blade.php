@@ -12,6 +12,11 @@
         html,body{
             height:100%;
         }
+        .shadow{
+            vertical-align: middle;
+            border: 1px solid white;
+            box-shadow: 0 6px 30px -10px rgba(0, 0, 0, .6)!important;
+        }
     </style>
 </head>
 <body>
