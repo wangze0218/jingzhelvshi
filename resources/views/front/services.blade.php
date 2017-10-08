@@ -39,8 +39,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <ol class="breadcrumb" style="margin-top: 10px; margin-bottom: 10px;">
-                    <li><a href="http://www.clantrip.com">首页</a></li>
-                    <li><a class="active" href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=6">专业领域</a></li>
+                    <li><a href="">首页</a></li>
+                    <li><a class="active" href="">专业领域</a></li>
                 </ol>
             </div>
         </div>
@@ -53,7 +53,7 @@
                         <div id="sidebar-content">
                             <ul>
                                 <li>
-                                    <a class="left-active" href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=7">商品房屋买卖纠纷</a>
+                                    <a class="left-active" href="">商品房屋买卖纠纷</a>
                                     {{--<ul>--}}
                                         {{--<li><a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=7&amp;id=1" title="签证类型概述">概述</a></li>--}}
                                         {{--<li><a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=7&amp;id=1" title="签证类型概述">未经家人同意、经济困难就可以不履行买卖合同吗？</a></li>--}}
@@ -61,28 +61,28 @@
                                 </li>
 
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=4" title="签证费">二手房屋买卖纠纷</a>
+                                    <a href="" title="签证费">二手房屋买卖纠纷</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=5" title="节假日及闭馆说明">房产继承纠纷</a>
+                                    <a href="" title="节假日及闭馆说明">房产继承纠纷</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=36" title="护照追踪与检索">期房买卖纠纷</a>
+                                    <a href="" title="护照追踪与检索">期房买卖纠纷</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=6" title="照片和指纹">租赁合同纠纷</a>
+                                    <a href="" title="照片和指纹">租赁合同纠纷</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=7" title="申请免面谈">婚姻共有房产分割</a>
+                                    <a href="" title="申请免面谈">婚姻共有房产分割</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=8" title="须进一步审理的申请">居民合同纠纷</a>
+                                    <a href="" title="须进一步审理的申请">居民合同纠纷</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=9" title="提交221(G)文件">房屋买卖纠纷</a>
+                                    <a href="">房屋买卖纠纷</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=10" title="儿童签证">物业合同纠纷</a>
+                                    <a href="">物业合同纠纷</a>
                                 </li>
                             </ul>
                         </div>

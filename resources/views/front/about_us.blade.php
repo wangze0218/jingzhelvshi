@@ -52,7 +52,6 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <a target="_blank" href="">
-                    {{--<img src="http://www.clantrip.com/static/images/banner1.jpg" alt="美国签证代办" style="width: 1920px; max-width: 1920px; margin-left: 0px;">--}}
                     <img src="img/banner_10.jpg" alt="">
                 </a>
             </div>

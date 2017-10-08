@@ -33,8 +33,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <ol class="breadcrumb" style="margin-top: 10px; margin-bottom: 10px;">
-                    <li><a href="http://www.clantrip.com">首页</a></li>
-                    <li><a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=9">律师团队</a></li>			</ol>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">律师团队</a></li>			</ol>
             </div>
         </div>
     </div>
@@ -46,14 +46,14 @@
                         <div id="sidebar-content">
                             <ul>
                                 <li>
-                                    <a class="left-active" href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=7">律师列表</a>
+                                    <a class="left-active" href="">律师列表</a>
                                 </li>
 
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=4" title="签证费">助理列表</a>
+                                    <a href="">助理列表</a>
                                 </li>
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=5" title="节假日及闭馆说明">特邀顾问</a>
+                                    <a href="" title="节假日及闭馆说明">特邀顾问</a>
                                 </li>
                             </ul>
                         </div>

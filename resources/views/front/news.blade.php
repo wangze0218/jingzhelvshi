@@ -273,8 +273,9 @@
         <div class="row">
             <div class="col-sm-12">
                 <ol class="breadcrumb" style="margin-top: 10px; margin-bottom: 10px;">
-                    <li><a href="http://www.clantrip.com">首页</a></li>
-                    <li><a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=9">律师行业新闻</a></li>			</ol>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">律师行业新闻</a></li>
+                </ol>
             </div>
         </div>
     </div>
@@ -286,11 +287,11 @@
                         <div id="sidebar-content">
                             <ul>
                                 <li>
-                                    <a class="left-active" href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=7">新闻</a>
+                                    <a class="left-active" href="">新闻</a>
                                 </li>
 
                                 <li>
-                                    <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=12&amp;id=4" title="签证费">荣誉</a>
+                                    <a href="">荣誉</a>
                                 </li>
                             </ul>
                         </div>
@@ -309,57 +310,57 @@
                     </div>
                     <div class="media our-news-item">
                         <div class="media-left">
-                            <a class="thumbnail" href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49">
+                            <a class="thumbnail" href="">
                                 <img class="media-object" src="http://www.clantrip.com/uploadfile/2017/0509/20170509103625563.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49"><h4 class="media-heading">“申房律所”荣登诉讼十强榜</h4></a>
+                            <a href="">“申房律所”荣登诉讼十强榜</h4></a>
                             <div class="dynamic-li">
                                 <b>0</b><em class="pic-glob"></em><span>时间：2017-05-09 </span>
                             </div>
                             <p>近日，由权威媒体在民商案件中抽取高诉讼标的的案件，再按照地域、法院、案件难易程度进行汇总分类排序，根据完全客观的大数据分析结果，生成了上海地区诉讼十强律所榜单，上海市申房律师事务所强势列入上海地区诉讼十强榜。
                             </p>
                             <div class="dynamic-li">
-                                <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49">[详细]</a>
+                                <a href="">[详细]</a>
                                 <span>作者：申房律所 <span class="hidden-xs">clantrip.com</span> </span>
                             </div>
                         </div>
                     </div>
                     <div class="media our-news-item">
                         <div class="media-left">
-                            <a class="thumbnail" href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49">
+                            <a class="thumbnail" href="">
                                 <img class="media-object" src="http://www.clantrip.com/uploadfile/2017/0509/20170509103625563.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49"><h4 class="media-heading">“申房律所”荣登诉讼十强榜</h4></a>
+                            <a href="">“申房律所”荣登诉讼十强榜</h4></a>
                             <div class="dynamic-li">
                                 <b>0</b><em class="pic-glob"></em><span>时间：2017-05-09 </span>
                             </div>
                             <p>近日，由权威媒体在民商案件中抽取高诉讼标的的案件，再按照地域、法院、案件难易程度进行汇总分类排序，根据完全客观的大数据分析结果，生成了上海地区诉讼十强律所榜单，上海市申房律师事务所强势列入上海地区诉讼十强榜。
                             </p>
                             <div class="dynamic-li">
-                                <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49">[详细]</a>
+                                <a href="">[详细]</a>
                                 <span>作者：申房律所 <span class="hidden-xs">clantrip.com</span> </span>
                             </div>
                         </div>
                     </div>
                     <div class="media our-news-item">
                         <div class="media-left">
-                            <a class="thumbnail" href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49">
+                            <a class="thumbnail" href="">
                                 <img class="media-object" src="http://www.clantrip.com/uploadfile/2017/0509/20170509103625563.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
                             </a>
                         </div>
                         <div class="media-body">
-                            <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49"><h4 class="media-heading">“申房律所”荣登诉讼十强榜</h4></a>
+                            <a href=""><h4 class="media-heading">“申房律所”荣登诉讼十强榜</h4></a>
                             <div class="dynamic-li">
                                 <b>0</b><em class="pic-glob"></em><span>时间：2017-05-09 </span>
                             </div>
                             <p>近日，由权威媒体在民商案件中抽取高诉讼标的的案件，再按照地域、法院、案件难易程度进行汇总分类排序，根据完全客观的大数据分析结果，生成了上海地区诉讼十强律所榜单，上海市申房律师事务所强势列入上海地区诉讼十强榜。
                             </p>
                             <div class="dynamic-li">
-                                <a href="http://www.clantrip.com/index.php?m=content&amp;c=index&amp;a=show&amp;catid=10&amp;id=49">[详细]</a>
+                                <a href="">[详细]</a>
                                 <span>作者：申房律所 <span class="hidden-xs">clantrip.com</span> </span>
                             </div>
                         </div>
@@ -367,7 +368,11 @@
                     <div class="article-footer">
                         <nav aria-label="Page navigation">
                             <ul class="pagination">
-                                <li><a href="index.php?m=content&amp;c=index&amp;a=lists&amp;catid=10">«</a></li> <li class="active"><span>1 <span class="sr-only">(current)</span></span></li> <li><a href="index.php?m=content&amp;c=index&amp;a=lists&amp;catid=10&amp;page=2">2</a></li> <li><a href="index.php?m=content&amp;c=index&amp;a=lists&amp;catid=10&amp;page=2">»</a></li>						</ul>
+                                <li><a href="">«</a></li>
+                                <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">»</a></li>
+                            </ul>
                         </nav>
                     </div>
                 </div>
