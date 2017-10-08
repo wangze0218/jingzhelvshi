@@ -81,7 +81,10 @@
             height: 100%;
             border-left: 1px solid #c1c1c1;
         }
-
+        .line{
+            border-top: 1px solid #949494;
+            padding-bottom:30px ;
+        }
     </style>
 </head>
 <body>
