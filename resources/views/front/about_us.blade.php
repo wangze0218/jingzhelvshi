@@ -6,8 +6,14 @@
         }
 
         @media screen and (min-width: 768px) {
+            #carousel-example-generic{
+                width: 100%;
+                height: 378px;
+                overflow: hidden;
+                margin-top: 80px;
+            }
             #about {
-                padding: 120px 0 145px 0;
+                padding: 50px 0 145px 0;
                 background-color: #ffffff;
                 color: #363636;
             }
@@ -22,6 +28,9 @@
             }
         }
         @media (max-width: 767px) {
+            #carousel-example-generic{
+                display: none;
+            }
             #about{
                 text-align:center;
             }
@@ -37,6 +46,19 @@
     </style>
 @endsection
 @section('content')
+    {{--pc轮播--}}
+    <div id="carousel-example-generic" class="carousel slide my-slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a target="_blank" href="">
+                    {{--<img src="http://www.clantrip.com/static/images/banner1.jpg" alt="美国签证代办" style="width: 1920px; max-width: 1920px; margin-left: 0px;">--}}
+                    <img src="img/banner_10.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    {{--轮播结束--}}
     <section id="about">
     <div class="container">
     <div class="title">

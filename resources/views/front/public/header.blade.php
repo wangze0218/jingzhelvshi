@@ -74,11 +74,26 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse col-sm-7" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="/">首页 <span class="sr-only">(current)</span></a><p class="line-top hidden-xs"></p></li>
-                    <li class=""><a href="/services">专业领域</a></li>
-                    <li><a href="">律师团队</a></li>
-                    <li><a href="/news">律师行业新闻</a></li>
-                    <li><a href="/about_us">联系我们</a></li>
+                    <li @if(Request::path() == '/') class="active" @endif>
+                        <a href="/">首页 <span class="sr-only">(current)</span></a>
+                        @if(Request::path() == '/') <p class="line-top hidden-xs"></p> @endif
+                    </li>
+                    <li @if(Request::path() == 'services') class="active" @endif>
+                        <a href="/services">专业领域</a>
+                        @if(Request::path() == 'services') <p class="line-top hidden-xs"></p> @endif
+                    </li>
+                    <li @if(Request::path() == 'team') class="active" @endif>
+                        <a href="/team">律师团队</a>
+                        @if(Request::path() == 'team') <p class="line-top hidden-xs"></p> @endif
+                    </li>
+                    <li @if(Request::path() == 'news') class="active" @endif>
+                        <a href="/news">律师行业新闻</a>
+                        @if(Request::path() == 'news') <p class="line-top hidden-xs"></p> @endif
+                    </li>
+                    <li @if(Request::path() == 'about_us') class="active" @endif>
+                        <a href="/about_us">联系我们</a>
+                        @if(Request::path() == 'about_us') <p class="line-top hidden-xs"></p> @endif
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

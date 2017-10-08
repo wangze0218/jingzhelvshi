@@ -27,6 +27,9 @@ Route::get('/about_us', function () {
     return view('front.about_us');
 });
 
+Route::get('/team', function () {
+    return view('front.team');
+});
 //
 //========================================================================================================
 //

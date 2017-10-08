@@ -3,18 +3,15 @@
     <style>
         @media screen and (min-width: 768px) {
             #services{
-                background-color: #f5f5f5;
-                padding: 150px 0px;
+                background-color: #ffffff;
+                /*background-color: #f5f5f5;*/
+                padding: 50px 0px;
             }
             #carousel-example-generic{
                 width: 100%;
-                height: 540px;
+                height: 378px;
                 overflow: hidden;
                 margin-top: 80px;
-            }
-            #carousel-example-generic img{
-                /*width: 100%;*/
-
             }
             #tellpnone_{
                 display: none;
@@ -23,7 +20,8 @@
         }
         @media (max-width: 767px) {
             #services{
-                background-color: #f5f5f5;
+                /*background-color: #f5f5f5;*/
+                background-color: #ffffff;
                 padding: 50px 0px;
             }
             #carousel-example-generic{
@@ -34,7 +32,7 @@
                 height: 100%;
                 overflow: hidden;
                 margin-top: 50px;
-                background:url('/img/tianping.jpg') center top ;
+                background:url('/img/banner_1.jpg') center top ;
                 /*-webkit-background-size:100% 100%;*/
                 /*background-size:100% 100%;*/
             }
@@ -69,7 +67,9 @@
             -moz-transition: all 0.225s ease-in-out;
             -o-transition: all 0.225s ease-in-out;
             transition: all 0.225s ease-in-out;
-            background-color: #fafafa;
+            /*background-color: #fafafa;*/
+            background-color: #ffffff;
+
             /*border: 1px solid #389bfa;*/
             border-radius:3px;
             padding: 10px;
