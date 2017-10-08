@@ -1,7 +1,6 @@
 @extends('front.public.master')
 @section('style')
     <style>
-
         @media screen and (min-width: 768px) {
             #services{
                 background-color: #f5f5f5;
@@ -35,7 +34,7 @@
                 height: 100%;
                 overflow: hidden;
                 margin-top: 50px;
-                background:url('/img/slide-1.jpg') center top ;
+                background:url('/img/tianping.jpg') center top ;
                 /*-webkit-background-size:100% 100%;*/
                 /*background-size:100% 100%;*/
             }
@@ -72,6 +71,7 @@
             transition: all 0.225s ease-in-out;
             background-color: #fafafa;
             /*border: 1px solid #389bfa;*/
+            border-radius:3px;
             padding: 10px;
             color:#777;
             margin-top: 20px;
@@ -87,7 +87,7 @@
             width: 90%;
         }
         .service-item .title{
-            border-bottom:1px solid #389bfa ;
+            border-bottom:1px solid #949494;
         }
         .service-item:hover>.title,
         .service-item:focus>.title{
@@ -111,13 +111,13 @@
             <div class="item active">
                 <a target="_blank" href="">
                     {{--<img src="http://www.clantrip.com/static/images/banner1.jpg" alt="美国签证代办" style="width: 1920px; max-width: 1920px; margin-left: 0px;">--}}
-                    <img src="img/slide-1.jpg" alt="美国签证代办" style="width: 1920px; max-width: 1920px; margin-left: 0px;">
+                    <img src="img/banner_1.jpg" alt="">
                 </a>
             </div>
             <div class="item">
                 <a target="_blank" href="">
                     {{--<img src="http://www.clantrip.com/static/images/banner2.jpg" alt="美国签证加急预约" style="width: 1920px; max-width: 1920px; margin-left: 0px;">--}}
-                    <img src="img/slide-2.jpg" alt="美国签证加急预约" style="width: 1920px; max-width: 1920px; margin-left: 0px;">
+                    <img src="img/banner_2.jpg" alt="">
                 </a>
             </div>
         </div>

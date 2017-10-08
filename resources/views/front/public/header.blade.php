@@ -26,9 +26,19 @@
         width: 18px;
         margin: auto;
     }
+    #header .navbar-default .navbar-nav>li>a{
+
+    }
+    @media (max-width:768px){
+        #header .navbar-default .navbar-nav>li>a{
+            /*color: #555;*/
+            font-size: 16px;
+        }
+    }
     @media screen and (min-width: 768px) {
         #header .navbar-default .navbar-nav>li>a {
-            font-size: 16px;
+            color: #555;
+            font-size: 18px;
             padding: 16px 30px 5px !important;
         }
         #header .navbar {
@@ -47,7 +57,7 @@
     }
 </style>
 <div id="header">
-    <nav class="navbar navbar-default navbar-fixed-top shadow">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header col-sm-3" style="background-color: white;">
@@ -64,11 +74,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse col-sm-7" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="">首页 <span class="sr-only">(current)</span></a><p class="line-top hidden-xs"></p></li>
-                    <li class=""><a href="">专业领域</a></li>
+                    <li class="active"><a href="/">首页 <span class="sr-only">(current)</span></a><p class="line-top hidden-xs"></p></li>
+                    <li class=""><a href="/services">专业领域</a></li>
                     <li><a href="">律师团队</a></li>
-                    <li><a href="">律师行业新闻</a></li>
-                    <li><a href="">联系我们</a></li>
+                    <li><a href="/news">律师行业新闻</a></li>
+                    <li><a href="/about_us">联系我们</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
