@@ -12,6 +12,10 @@
                 overflow: hidden;
                 margin-top: 80px;
             }
+            #carousel-example-generic img{
+                width:100%;
+                height: 378px;
+            }
             #about {
                 padding: 50px 0 145px 0;
                 background-color: #ffffff;

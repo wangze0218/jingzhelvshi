@@ -116,6 +116,10 @@
                 text-indent: 32px;
                 letter-spacing: 3px;
             }
+            #carousel-example-generic img{
+                width:100%;
+                height: 378px;
+            }
         }
         @media (max-width: 767px) {
             #carousel-example-generic{
