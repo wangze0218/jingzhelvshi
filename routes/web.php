@@ -44,5 +44,6 @@ Route::group(['middleware' => 'BehindMiddleware'],function (){
     });
     //用户管理
     Route::resource('/behind/user','Behind\UserController');
+    Route::resource('/behind/service','Behind\ServiceController');
     Route::resource('/behind/article','Behind\ArticleController');
 });

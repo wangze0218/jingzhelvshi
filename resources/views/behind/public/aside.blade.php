@@ -15,6 +15,12 @@
                 </a>
             </li>
             <li>
+                <a @if(\Request::path() == 'behind/service')class="active"@endif href="/behind/service" >
+                    <i class="icon-user"></i>
+                    <span>业务类别管理</span>
+                </a>
+            </li>
+            <li>
                 <a @if(\Request::path() == 'behind/article')class="active"@endif href="/behind/article" >
                     <i class="icon-user"></i>
                     <span>文章管理</span>
