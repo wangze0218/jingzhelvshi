@@ -11,7 +11,7 @@ namespace App\Business;
 use App\Model\ArticleModel;
 use App\System\ResponseException;
 
-class ArticleBusiness
+class ArticleBusinessAbstract
 {
     public function article($article_id)
     {
@@ -19,14 +19,15 @@ class ArticleBusiness
         return $article;
     }
 
-    public function articleCreate($title,$title_img,$title_describe,$content,$article_type)
+    public function articleCreate($title,$title_img,$title_describe,$vice_title_describe,$content,$rel_type_id)
     {
         $article = ArticleModel::create([
             'title'=>$title,
             'title_img'=>$title_img,
             'title_describe'=>$title_describe,
+            'vice_title_describe'=>$vice_title_describe,
             'content'=>$content,
-            'article_type'=>$article_type,
+            'rel_type_id'=>$rel_type_id,
         ]);
         return $article;
     }
@@ -36,30 +37,15 @@ class ArticleBusiness
     {
         $list['data'] = ArticleModel::getRecordListCondition(
             $where,
-            ['article_id','title','title_img','title_describe','article_type'],
+            ['article_id','title','title_img','title_describe','rel_type_id'],
             $order_by,
             $page,
             $page_size
         );
-        // 1产品与服务，2案例，3新闻
-        if(!empty($list['data'])){
-            foreach ($list['data'] as $k=>$v){
-                switch ($v->article_type){
-                    case 1:
-                        $list['data'][$k]->article_type_name = '产品与服务';
-                        break;
-                    case 2:
-                        $list['data'][$k]->article_type_name = '案例';
-                        break;
-                    case 3:
-                        $list['data'][$k]->article_type_name = '新闻';
-                        break;
-                }
-            }
-        }
+
         $list['count'] = ArticleModel::getRecordCountCondition(
             $where,
-            ['article_id','title','title_img','title_describe','article_type'],
+            ['article_id','title','title_img','title_describe','rel_type_id'],
             ['updated_at'=>'desc']
         );
         if($page && $page_size){
@@ -69,14 +55,15 @@ class ArticleBusiness
         return $list;
     }
 
-    public function articleUpdate($id,$title,$title_img,$title_describe,$content,$article_type)
+    public function articleUpdate($id,$title,$title_img,$title_describe,$vice_title_describe,$content,$rel_type_id)
     {
         $article = ArticleModel::updateRecordORM($id,[
             'title'=>$title,
             'title_img'=>$title_img,
             'title_describe'=>$title_describe,
+            'vice_title_describe'=>$vice_title_describe,
             'content'=>$content,
-            'article_type'=>$article_type,
+            'rel_type_id'=>$rel_type_id,
         ]);
         return $article;
     }

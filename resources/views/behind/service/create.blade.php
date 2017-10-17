@@ -9,8 +9,8 @@
             <form id="from" role="form" action="/behind/service" onsubmit="return add('/behind/service');" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">服务名称</label>
-                    <input class="form-control" name="service_name" id="service" placeholder="请输入服务名称" type="text">
+                    <label for="exampleInputEmail1">服务类别名称</label>
+                    <input class="form-control" name="service_name" id="service" placeholder="请输入服务类别名称" type="text">
                 </div>
                 <button type="submit" class="btn btn-info">提交</button>
             </form>

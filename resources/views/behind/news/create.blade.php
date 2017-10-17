@@ -6,11 +6,11 @@
             {{--Basic Forms--}}
         {{--</header>--}}
         <div class="panel-body">
-            <form id="from" role="form" action="/behind/service" onsubmit="return update('{{'/behind/service/'.$service->service_id}}');" method="post">
+            <form id="from" role="form" action="/behind/news" onsubmit="return add('/behind/news');" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">服务类别名称</label>
-                    <input class="form-control" name="service_name" id="service" value="{{$service->service_name}}" placeholder="请输入服务类别名称" type="text">
+                    <label for="exampleInputEmail1">新闻类别名称</label>
+                    <input class="form-control" name="news_name" id="news" placeholder="请输入新闻类别名称" type="text">
                 </div>
                 <button type="submit" class="btn btn-info">提交</button>
             </form>

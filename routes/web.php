@@ -44,6 +44,13 @@ Route::group(['middleware' => 'BehindMiddleware'],function (){
     });
     //用户管理
     Route::resource('/behind/user','Behind\UserController');
+    //业务管理
     Route::resource('/behind/service','Behind\ServiceController');
-    Route::resource('/behind/article','Behind\ArticleController');
+    Route::resource('/behind/service_article','Behind\ServiceArticleController');
+    //团队管理
+    Route::resource('/behind/team','Behind\TeamController');
+    Route::resource('/behind/team_article','Behind\TeamArticleController');
+    //新闻管理
+    Route::resource('/behind/news','Behind\NewsController');
+    Route::resource('/behind/news_article','Behind\NewsArticleController');
 });

@@ -304,9 +304,9 @@ class Model extends EloquentModel
      * @return bool|\Illuminate\Database\Eloquent\Collection|static[]
      */
     public static function getRecordLists($where = [],$columns = '*',$order_by = [],$page = 0,$pageSize = 0){
-        if(empty($where)){
-            return false;
-        }
+//        if(empty($where)){
+//            return false;
+//        }
 
         $record = self::query();
 
@@ -322,7 +322,7 @@ class Model extends EloquentModel
             }
         }
 
-        return $record->lists($columns);
+        return $record->pluck($columns);
     }
     /**
      * 根据条件得到记录列表(包括软删除)
