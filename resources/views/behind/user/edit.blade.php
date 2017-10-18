@@ -6,8 +6,9 @@
             {{--Basic Forms--}}
         {{--</header>--}}
         <div class="panel-body">
-            <form id="from" role="form" action="/behind/user" onsubmit="return update('{{'/behind/user/'.$user->user_id}}');" method="PUT">
+            <form id="from" role="form" action="/behind/user/{{$user->user_id}}" onsubmit="return update('{{'/behind/user/'.$user->user_id}}');" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="_method" value="PUT">
                 <div class="form-group">
                     <label for="exampleInputEmail1">用户名称</label>
                     <input class="form-control" value="{{$user->user_name}}" name="identity" id="exampleInputEmail1" placeholder="请输入用户名称" type="text">

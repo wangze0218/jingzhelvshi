@@ -5,15 +5,15 @@
         <div class="col-md-12">
             <section class="panel">
                 <div class="panel-body">
-                    <form action="/behind/service_article/{{$article->article_id}}" role="form" id="from" method = 'post' onsubmit="return update('/behind/service_article/{{$article->article_id}}');" enctype="multipart/form-data" class="form-horizontal tasi-form">
+                    <form action="/behind/team_article/{{$article->article_id}}" role="form" id="from" method = 'post' onsubmit="return update('/behind/team_article/{{$article->article_id}}');" enctype="multipart/form-data" class="form-horizontal tasi-form">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="_method" value="PUT">
                         <div class="form-group">
-                            <label class="control-label col-md-3">业务内容类型</label>
+                            <label class="control-label col-md-3">团队人员类型</label>
                             <div class="col-md-4">
                                 <select class="colorpicker-default form-control" name="rel_type_id" id="">
                                     @foreach($article_all_type as $k=>$v)
-                                        <option @if($article->rel_type_id == $v['service_id']) selected @endif value="{{$v['service_id']}}">{{$v['service_name']}}</option>
+                                        <option @if($article->rel_type_id == $v['team_id']) selected @endif value="{{$v['team_id']}}">{{$v['team_name']}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -61,7 +61,7 @@
                                 <script id="editor" type="text/plain" style="width:1024px;height:500px;">{!! $article->content !!}</script>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-default btn-lg btn-block">提交业务内容</button>
+                        <button type="submit" class="btn btn-default btn-lg btn-block">提交团队人员</button>
                     </form>
 
                 </div>

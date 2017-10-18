@@ -63,7 +63,6 @@
     });
         function add(url) {
             var formData = new FormData(document.getElementById("from"));
-            console.log(formData);
             $.ajax({
                 cache: true,
                 type: "post",
@@ -88,11 +87,12 @@
             return false;
         };
         function update(url) {
+            var formData = new FormData(document.getElementById("from"));
             $.ajax({
                 cache: true,
                 type: "PUT",
                 url:url,
-                data:$('#from').serialize(),// 你的formid
+                data:formData,// 你的formid
                 async: true,
                 error: function(request) {
                     alert("Connection error");

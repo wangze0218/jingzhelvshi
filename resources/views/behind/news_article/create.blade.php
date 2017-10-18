@@ -5,14 +5,14 @@
         <div class="col-md-12">
             <section class="panel">
                 <div class="panel-body">
-                    <form action="/behind/service_article" role="form" id="from" method = 'post' onsubmit="return add('/behind/service_article/');" enctype="multipart/form-data" class="form-horizontal tasi-form">
+                    <form action="/behind/news_article" role="form" id="from" method = 'post' onsubmit="return add('/behind/news_article/');" enctype="multipart/form-data" class="form-horizontal tasi-form">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="form-group">
-                            <label class="control-label col-md-3">业务内容类型</label>
+                            <label class="control-label col-md-3">新闻内容类型</label>
                             <div class="col-md-4">
                                 <select class="colorpicker-default form-control" name="rel_type_id" id="">
                                     @foreach($article_all_type as $k=>$v)
-                                        <option value="{{$v['service_id']}}">{{$v['service_name']}}</option>
+                                        <option value="{{$v['news_id']}}">{{$v['news_name']}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -87,7 +87,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-default btn-lg btn-block">提交业务内容</button>
+                        <button type="submit" class="btn btn-default btn-lg btn-block">提交新闻内容</button>
                     </form>
 
                 </div>
