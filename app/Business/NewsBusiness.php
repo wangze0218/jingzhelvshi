@@ -13,7 +13,7 @@ use App\System\ResponseException;
 
 class NewsBusiness
 {
-    public function news($news_id)
+    public function own($news_id)
     {
         $news = NewsModel::find($news_id);
         return $news;

@@ -13,7 +13,7 @@ use App\System\ResponseException;
 
 class TeamBusiness
 {
-    public function team($team_id)
+    public function own($team_id)
     {
         $team = TeamModel::find($team_id);
         return $team;

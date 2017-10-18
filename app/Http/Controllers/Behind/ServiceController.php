@@ -56,8 +56,11 @@ class ServiceController
     public function update(Request $request,$id)
     {
         $in = $request->all();
-        $Service = $this->ServiceBusiness->serviceUpdate($id,$in['service_name']);
-        return $this->_response(10000,'请求成功',$Service);
+        $service_name = $in['service_name'];
+        $service_areas = $in['service_areas'];
+        $summary = $in['summary'];
+        $service = $this->ServiceBusiness->serviceUpdate($id,$service_name,$service_areas,$summary);
+        return $this->_response(10000,'请求成功',$service);
     }
 
     public function destroy($id)

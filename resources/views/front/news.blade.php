@@ -286,13 +286,11 @@
                     <div id="sidebar" style="position: relative; width: 213px;">
                         <div id="sidebar-content">
                             <ul>
-                                <li>
-                                    <a class="left-active" href="">新闻</a>
-                                </li>
-
-                                <li>
-                                    <a href="">荣誉</a>
-                                </li>
+                                @foreach( $article_all_type as $k => $v )
+                                    <li>
+                                        <a @if($v['news_id'] == $own['news_id']) class="left-active" @endif  href="/news?rel_type_id={{$v['news_id']}}">{{$v['news_name']}}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -302,79 +300,34 @@
                         <h1 class="h2">新闻
                             <small class="visible-xs">
                                 <select name="" id="">
-                                    <option value="">新闻</option>
-                                    <option value="">荣誉</option>
+                                    @foreach( $article_all_type as $k => $v )
+                                        <option value="{{$v['news_id']}}">{{$v['news_id']}}</option>
+                                    @endforeach
                                 </select>
                             </small>
                         </h1>
                     </div>
-                    <div class="media our-news-item">
-                        <div class="media-left">
-                            <a class="thumbnail" href="">
-                                <img class="media-object" src="http://www.clantrip.com/uploadfile/2017/0509/20170509103625563.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="">“申房律所”荣登诉讼十强榜</h4></a>
-                            <div class="dynamic-li">
-                                <b>0</b><em class="pic-glob"></em><span>时间：2017-05-09 </span>
+                    @foreach( $list['data'] as $k => $v)
+                        <div class="media our-news-item">
+                            <div class="media-left">
+                                <a class="thumbnail" href="">
+                                    <img class="media-object" src="{{ $v['title_img'] }}" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
+                                </a>
                             </div>
-                            <p>近日，由权威媒体在民商案件中抽取高诉讼标的的案件，再按照地域、法院、案件难易程度进行汇总分类排序，根据完全客观的大数据分析结果，生成了上海地区诉讼十强律所榜单，上海市申房律师事务所强势列入上海地区诉讼十强榜。
-                            </p>
-                            <div class="dynamic-li">
-                                <a href="">[详细]</a>
-                                <span>作者：申房律所 <span class="hidden-xs">clantrip.com</span> </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media our-news-item">
-                        <div class="media-left">
-                            <a class="thumbnail" href="">
-                                <img class="media-object" src="http://www.clantrip.com/uploadfile/2017/0509/20170509103625563.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href="">“申房律所”荣登诉讼十强榜</h4></a>
-                            <div class="dynamic-li">
-                                <b>0</b><em class="pic-glob"></em><span>时间：2017-05-09 </span>
-                            </div>
-                            <p>近日，由权威媒体在民商案件中抽取高诉讼标的的案件，再按照地域、法院、案件难易程度进行汇总分类排序，根据完全客观的大数据分析结果，生成了上海地区诉讼十强律所榜单，上海市申房律师事务所强势列入上海地区诉讼十强榜。
-                            </p>
-                            <div class="dynamic-li">
-                                <a href="">[详细]</a>
-                                <span>作者：申房律所 <span class="hidden-xs">clantrip.com</span> </span>
+                            <div class="media-body">
+                                <a href=""><h4>{{ $v['title'] }}</h4></a>
+                                <div class="dynamic-li">
+                                    <b></b><em class="pic-glob"></em><span>时间：{{ $v['created_at'] }} </span>
+                                </div>
+                                <p>{{  $v['title_describe'] }}</p>
+                                <div class="dynamic-li">
+                                    <a href="">[详细]</a>
+                                    <span>作者：{{ $v['vice_title_describe'] }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="media our-news-item">
-                        <div class="media-left">
-                            <a class="thumbnail" href="">
-                                <img class="media-object" src="http://www.clantrip.com/uploadfile/2017/0509/20170509103625563.jpg" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <a href=""><h4 class="media-heading">“申房律所”荣登诉讼十强榜</h4></a>
-                            <div class="dynamic-li">
-                                <b>0</b><em class="pic-glob"></em><span>时间：2017-05-09 </span>
-                            </div>
-                            <p>近日，由权威媒体在民商案件中抽取高诉讼标的的案件，再按照地域、法院、案件难易程度进行汇总分类排序，根据完全客观的大数据分析结果，生成了上海地区诉讼十强律所榜单，上海市申房律师事务所强势列入上海地区诉讼十强榜。
-                            </p>
-                            <div class="dynamic-li">
-                                <a href="">[详细]</a>
-                                <span>作者：申房律所 <span class="hidden-xs">clantrip.com</span> </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="article-footer">
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                <li><a href="">«</a></li>
-                                <li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
-                                <li><a href="">2</a></li>
-                                <li><a href="">»</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                    @endforeach
+                    {!! $page_view !!}
                 </div>
 
             </div>

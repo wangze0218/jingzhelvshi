@@ -7,80 +7,88 @@
  */
 
 namespace App\Http\Controllers\Front;
-use App\Business\ArticleBusiness;
+use App\Business\ServiceArticleBusiness;
+use App\Business\ServiceBusiness;
+use App\Business\TeamArticleBusiness;
+use App\Business\TeamBusiness;
+use App\Business\NewsArticleBusiness;
+use App\Business\NewsBusiness;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class FrontController
 {
-    private $articleBusiness;
-    public function __construct(ArticleBusiness $articleBusiness)
+    public function __construct()
     {
-        $this->articleBusiness = $articleBusiness;
+
     }
 
-    public function service(Request $request)
+    public function service( Request $request , ServiceBusiness $serviceBusiness , ServiceArticleBusiness $articleBusiness )
     {
         $in = $request->all();
         $page = empty($in['page'])?1:$in['page'];
-        $articles = $this->articleBusiness->articleList(['article_type'=>1],1,15,['article_id'=>'desc']);
-        $page_num = $articles['page_num'];
-        $articles = $articles['data']->toArray();
+
+        $article_type = $articleBusiness->article_type(empty($in['rel_type_id'])?'':$in['rel_type_id']);
+        $where = [
+            'rel_type_id'=>$article_type
+        ];
+        $page_size = 15;
+        $service = $serviceBusiness->service($article_type);
+        $list = $articleBusiness->articleList($where,$page,$page_size,['updated_at'=>'desc']);
+        $page_num = $list['page_num'];
         $page_view = $this->page_view($page,$page_num,'/solution/');
-        return view('front.service',[
-            'articles'=>$articles,
+        $article_all_type = $articleBusiness->article_all_type();
+        return view('front.services',[
+            'service'=>$service,
+            'list'=>$list,
             'page_view'=>$page_view,
+            'article_all_type'=>$article_all_type
         ]);
     }
 
-    public function solution(Request $request)
+    public function team( Request $request , TeamBusiness $business , TeamArticleBusiness $articleBusiness )
     {
         $in = $request->all();
         $page = empty($in['page'])?1:$in['page'];
-        $articles = $this->articleBusiness->articleList(['article_type'=>2],1,15,['article_id'=>'desc']);
-        $page_num = $articles['page_num'];
-        $articles = $articles['data']->toArray();
+
+        $article_type = $articleBusiness->article_type(empty($in['rel_type_id'])?'':$in['rel_type_id']);
+        $where = [
+            'rel_type_id'=>$article_type
+        ];
+        $page_size = 15;
+        $own = $business->own($article_type);
+        $list = $articleBusiness->articleList($where,$page,$page_size,['updated_at'=>'desc']);
+        $page_num = $list['page_num'];
         $page_view = $this->page_view($page,$page_num,'/solution/');
-        return view('front.solution',[
-            'articles'=>$articles,
+        $article_all_type = $articleBusiness->article_all_type();
+        return view('front.team',[
+            'own'=>$own,
+            'list'=>$list,
             'page_view'=>$page_view,
+            'article_all_type'=>$article_all_type
         ]);
     }
 
-    public function news_center(Request $request)
+    public function news( Request $request , NewsBusiness $business , NewsArticleBusiness $articleBusiness )
     {
         $in = $request->all();
         $page = empty($in['page'])?1:$in['page'];
-        $articles = $this->articleBusiness->articleList(['article_type'=>3],1,15,['article_id'=>'desc']);
-        $page_num = $articles['page_num'];
-        $articles = $articles['data']->toArray();
-        $page_view = $this->page_view($page,$page_num,'/solution/');
-        return view('front.news_center',[
-            'articles'=>$articles,
-            'page_view'=>$page_view,
-        ]);
-    }
 
-    public function company_dynamics(Request $request)
-    {
-        $in = $request->all();
-        $page = empty($in['page'])?1:$in['page'];
-        $articles = $this->articleBusiness->articleList(['article_type'=>4],1,15,['article_id'=>'desc']);
-        $page_num = $articles['page_num'];
-        $articles = $articles['data']->toArray();
+        $article_type = $articleBusiness->article_type(empty($in['rel_type_id'])?'':$in['rel_type_id']);
+        $where = [
+            'rel_type_id'=>$article_type
+        ];
+        $page_size = 15;
+        $own = $business->own($article_type);
+        $list = $articleBusiness->articleList($where,$page,$page_size,['updated_at'=>'desc']);
+        $page_num = $list['page_num'];
         $page_view = $this->page_view($page,$page_num,'/solution/');
-        return view('front.company_dynamics',[
-            'articles'=>$articles,
+        $article_all_type = $articleBusiness->article_all_type();
+        return view('front.news',[
+            'own'=>$own,
+            'list'=>$list,
             'page_view'=>$page_view,
-        ]);
-    }
-
-    public function details(Request $request,$id)
-    {
-        $in = $request->all();
-        $articles = $this->articleBusiness->article($id);
-        return view('front.details',[
-            'articles'=>$articles,
+            'article_all_type'=>$article_all_type
         ]);
     }
 

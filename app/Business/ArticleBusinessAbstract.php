@@ -37,22 +37,20 @@ class ArticleBusinessAbstract
     {
         $list['data'] = ArticleModel::getRecordListCondition(
             $where,
-            ['article_id','title','title_img','title_describe','rel_type_id'],
+            ['article_id','title','title_img','title_describe','vice_title_describe','rel_type_id','created_at'],
             $order_by,
             $page,
             $page_size
         );
-
         $list['count'] = ArticleModel::getRecordCountCondition(
-            $where,
-            ['article_id','title','title_img','title_describe','rel_type_id'],
-            ['updated_at'=>'desc']
+            $where
         );
         if($page && $page_size){
             $list['page_num'] = ceil($list['count']/$page_size);
+            if( $list['page_num'] <= 0 ) $list['page_num'] = 1;
             $list['page'] = $page;
         }
-        return $list;
+        return json_decode(json_encode($list),1);
     }
 
     public function articleUpdate($id,$title,$title_img,$title_describe,$vice_title_describe,$content,$rel_type_id)

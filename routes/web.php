@@ -14,22 +14,14 @@
 Route::get('/', function () {
     return view('front.home');
 });
-
-Route::get('/services', function () {
-    return view('front.services');
-});
-
-Route::get('/news', function () {
-    return view('front.news');
-});
-
 Route::get('/about_us', function () {
     return view('front.about_us');
 });
 
-Route::get('/team', function () {
-    return view('front.team');
-});
+Route::get('/services','Front\FrontController@service');
+Route::get('/team','Front\FrontController@team');
+Route::get('/news','Front\FrontController@news');
+
 //
 //========================================================================================================
 //

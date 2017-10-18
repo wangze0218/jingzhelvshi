@@ -47,7 +47,7 @@ class NewsController
 
     public function edit($id)
     {
-        $news = $this->NewsBusiness->news($id);
+        $news = $this->NewsBusiness->own($id);
         return view('behind.news.edit',['news'=>$news]);
     }
 

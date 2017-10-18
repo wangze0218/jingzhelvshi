@@ -90,8 +90,10 @@
             var formData = new FormData(document.getElementById("from"));
             $.ajax({
                 cache: true,
-                type: "PUT",
+                type: "post",
                 url:url,
+                contentType:false,
+                processData:false,
                 data:formData,// 你的formid
                 async: true,
                 error: function(request) {

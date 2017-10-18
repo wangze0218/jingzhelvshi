@@ -45,44 +45,35 @@
                     <div id="sidebar" style="position: relative; width: 213px;">
                         <div id="sidebar-content">
                             <ul>
-                                <li>
-                                    <a class="left-active" href="">律师列表</a>
-                                </li>
-
-                                <li>
-                                    <a href="">助理列表</a>
-                                </li>
-                                <li>
-                                    <a href="" title="节假日及闭馆说明">特邀顾问</a>
-                                </li>
+                                @foreach( $article_all_type as $k => $v )
+                                    <li>
+                                        <a @if($v['team_id'] == $own['team_id']) class="left-active" @endif  href="/team?rel_type_id={{$v['team_id']}}">{{$v['team_name']}}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-9 usinfo-article">
                     <div class="article-title">
-                        <h1 class="h2">律师列表
+                        <h1 class="h2">{{ $own['team_name'] }}
                             <small class="visible-xs">
                                 <select name="" id="">
-                                    <option value="">律师列表</option>
-                                    <option value="">助理列表</option>
-                                    <option value="">特邀顾问</option>
+                                    @foreach( $article_all_type as $k => $v )
+                                        <option value="{{$v['team_id']}}">{{$v['team_id']}}</option>
+                                    @endforeach
                                 </select>
                             </small>
                         </h1>
                     </div>
-                    <div class="col-xs-6 col-sm-6 team-item">
-                        <img class="team-img" src="/img/pep.jpg" alt="">
-                        <h4>律师XX</h4>
-                        <p>T:152-100-19000</p>
-                        <p>E:418888888@163.com</p>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 team-item">
-                        <img class="team-img" src="/img/pep.jpg" alt="">
-                        <h4>律师XX</h4>
-                        <p>T:152-100-19000</p>
-                        <p>E:418888888@163.com</p>
-                    </div>
+                    @foreach( $list['data'] as $k => $v)
+                        <div class="col-xs-6 col-sm-6 team-item">
+                            <img class="team-img" src="{{ $v['title_img'] }}" alt="">
+                            <h4>{{ $v['title'] }}</h4>
+                            <p> {{ $v['title_describe'] }} </p>
+                            <p> {{ $v['vice_title_describe'] }} </p>
+                        </div>
+                    @endforeach
                 </div>
 
             </div>

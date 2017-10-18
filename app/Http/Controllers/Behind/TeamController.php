@@ -47,7 +47,7 @@ class TeamController
 
     public function edit($id)
     {
-        $team = $this->TeamBusiness->team($id);
+        $team = $this->TeamBusiness->own($id);
         return view('behind.team.edit',['team'=>$team]);
     }
 

@@ -30,4 +30,6 @@ class ServiceArticleBusiness extends ArticleBusinessAbstract
             return $type_ids[0];
         }
     }
+    
+    
 }
