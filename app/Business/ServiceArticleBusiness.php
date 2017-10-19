@@ -14,6 +14,16 @@ use App\System\ResponseException;
 
 class ServiceArticleBusiness extends ArticleBusinessAbstract
 {
+    public function article( $article_id )
+    {
+        $article = ArticleModel::find( $article_id )->toArray();
+        $business = $this->setBusiness( 'App\Business\ServiceBusiness' );
+        $business_info = $business->own( $article['rel_type_id'] , ['service_id as id','service_name as name'] );
+        $article['business_info']['id'] = $business_info['id'];
+        $article['business_info']['name'] = $business_info['name'];
+        return $article;
+    }
+
     public function article_all_type()
     {
         $type = ServiceModel::getRecordListCondition([],['service_id','service_name'])->toArray();

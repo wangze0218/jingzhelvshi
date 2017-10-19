@@ -21,6 +21,9 @@ Route::get('/about_us', function () {
 Route::get('/services','Front\FrontController@service');
 Route::get('/team','Front\FrontController@team');
 Route::get('/news','Front\FrontController@news');
+Route::get('/services/page/{id}','Front\FrontController@service_page');
+Route::get('/team/page/{id}','Front\FrontController@team_page');
+Route::get('/news/page/{id}','Front\FrontController@news_page');
 
 //
 //========================================================================================================

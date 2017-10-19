@@ -101,10 +101,9 @@
                             <tbody>
                             <tr>
                                 @foreach( $list['data'] as $k => $v)
-                                    <td><a href=""> {{ $v['title'] }} </a></td>
+                                    <td><a href="/services/page/{{$v['article_id']}}"> {{ $v['title'] }} </a></td>
                                     <td>{{ $v['created_at'] }}</td>
                                 @endforeach
-
                             </tr>
                             </tbody>
                         </table>

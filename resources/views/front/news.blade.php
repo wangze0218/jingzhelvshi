@@ -310,18 +310,18 @@
                     @foreach( $list['data'] as $k => $v)
                         <div class="media our-news-item">
                             <div class="media-left">
-                                <a class="thumbnail" href="">
-                                    <img class="media-object" src="{{ $v['title_img'] }}" alt="92名中国民工被欠薪受困塞班岛 华裔中介扣钱逃匿">
+                                <a class="thumbnail" href="/news/page/{{$v['article_id']}}">
+                                    <img class="media-object" src="{{ $v['title_img'] }}" alt="">
                                 </a>
                             </div>
                             <div class="media-body">
-                                <a href=""><h4>{{ $v['title'] }}</h4></a>
+                                <a href="/news/page/{{$v['article_id']}}"><h4>{{ $v['title'] }}</h4></a>
                                 <div class="dynamic-li">
                                     <b></b><em class="pic-glob"></em><span>时间：{{ $v['created_at'] }} </span>
                                 </div>
                                 <p>{{  $v['title_describe'] }}</p>
                                 <div class="dynamic-li">
-                                    <a href="">[详细]</a>
+                                    <a href="/news/page/{{$v['article_id']}}">[详细]</a>
                                     <span>作者：{{ $v['vice_title_describe'] }}</span>
                                 </div>
                             </div>

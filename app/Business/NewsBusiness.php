@@ -13,10 +13,10 @@ use App\System\ResponseException;
 
 class NewsBusiness
 {
-    public function own($news_id)
+    public function own( $news_id , $columns = ['*'] )
     {
-        $news = NewsModel::find($news_id);
-        return $news;
+        $own = NewsModel::findRecordOneCondition(['news_id'=>$news_id],$columns);
+        return json_decode(json_encode($own),1);
     }
 
     public function newsCreate($news_name,$news_id)

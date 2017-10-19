@@ -13,10 +13,10 @@ use App\System\ResponseException;
 
 class TeamBusiness
 {
-    public function own($team_id)
+    public function own( $team_id , $columns = ['*'] )
     {
-        $team = TeamModel::find($team_id);
-        return $team;
+        $own = TeamModel::findRecordOneCondition(['team_id'=>$team_id],$columns);
+        return json_decode(json_encode($own),1);
     }
 
     public function teamCreate($team_name,$team_id)

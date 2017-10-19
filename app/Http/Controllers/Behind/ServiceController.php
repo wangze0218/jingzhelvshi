@@ -49,7 +49,7 @@ class ServiceController
 
     public function edit($id)
     {
-        $service = $this->ServiceBusiness->service($id);
+        $service = $this->ServiceBusiness->own($id);
         return view('behind.service.edit',['service'=>$service]);
     }
 

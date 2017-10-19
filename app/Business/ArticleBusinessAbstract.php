@@ -10,14 +10,16 @@ namespace App\Business;
 
 use App\Model\ArticleModel;
 use App\System\ResponseException;
+use App\Business\ServiceBusiness;
 
-class ArticleBusinessAbstract
+abstract class ArticleBusinessAbstract
 {
-    public function article($article_id)
+    protected function setBusiness( $business_name )
     {
-        $article = ArticleModel::find($article_id);
-        return $article;
+        return $this->business = new $business_name();
     }
+
+    abstract function article($article_id);
 
     public function articleCreate($title,$title_img,$title_describe,$vice_title_describe,$content,$rel_type_id)
     {

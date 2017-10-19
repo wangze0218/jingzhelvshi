@@ -14,12 +14,12 @@ use App\System\ResponseException;
 
 class ServiceBusiness
 {
-    public function service($service_id)
+    public function own( $service_id , $columns = ['*'] )
     {
-        $service = ServiceModel::find($service_id);
-        $service['service_areas'] = TextModel::getRecordLists(['rel_id'=>$service->service_areas_uuid],'text');
-        $service['summary'] = TextModel::getRecordLists(['rel_id'=>$service->summary_uuid],'text');
-        return json_decode(json_encode($service),1);
+        $own = ServiceModel::findRecordOneCondition(['service_id'=>$service_id],$columns);
+        $own['service_areas'] = TextModel::getRecordLists(['rel_id'=>$own->service_areas_uuid],'text');
+        $own['summary'] = TextModel::getRecordLists(['rel_id'=>$own->summary_uuid],'text');
+        return json_decode(json_encode($own),1);
     }
 
     public function serviceCreate($service_name,$service_id,$summary_uuid,$service_areas_uuid)

@@ -14,6 +14,16 @@ use App\System\ResponseException;
 
 class TeamArticleBusiness extends ArticleBusinessAbstract
 {
+    public function article( $article_id )
+    {
+        $article = ArticleModel::find( $article_id )->toArray();
+        $business = $this->setBusiness( 'App\Business\TeamBusiness' );
+        $business_info = $business->own( $article['rel_type_id'] , ['team_id as id','team_name as name'] );
+        $article['business_info']['id'] = $business_info['id'];
+        $article['business_info']['name'] = $business_info['name'];
+        return $article;
+    }
+
     public function article_all_type()
     {
         $type = TeamModel::getRecordListCondition([],['team_id','team_name'])->toArray();

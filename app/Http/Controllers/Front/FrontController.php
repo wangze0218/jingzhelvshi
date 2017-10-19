@@ -33,7 +33,7 @@ class FrontController
             'rel_type_id'=>$article_type
         ];
         $page_size = 15;
-        $service = $serviceBusiness->service($article_type);
+        $service = $serviceBusiness->own($article_type);
         $list = $articleBusiness->articleList($where,$page,$page_size,['updated_at'=>'desc']);
         $page_num = $list['page_num'];
         $page_view = $this->page_view($page,$page_num,'/solution/');
@@ -90,6 +90,61 @@ class FrontController
             'page_view'=>$page_view,
             'article_all_type'=>$article_all_type
         ]);
+    }
+
+    public function service_page( Request $request , $id , ServiceArticleBusiness $articleBusiness)
+    {
+        $in = $request->all();
+        $articles = $articleBusiness->article( $id );
+        $two['url'] = "/services";
+        $two['name'] = "专业领域";
+        $three['url'] = "/services?rel_type_id=".$articles['business_info']['id'];
+        $three['name'] = $articles['business_info']['name'];
+        $breadcrumb = $this->breadcrumb($two,$three);
+        return view('front.page',[
+            'article'=>htmlspecialchars_decode($articles['content']),
+            'breadcrumb'=>$breadcrumb
+        ]);
+    }
+
+    public function team_page( Request $request , $id , TeamArticleBusiness $articleBusiness)
+    {
+        $in = $request->all();
+        $articles = $articleBusiness->article( $id );
+        $two['url'] = "/team";
+        $two['name'] = "律师团队";
+        $three['url'] = "/team?rel_type_id=".$articles['business_info']['id'];
+        $three['name'] = $articles['business_info']['name'];
+        $breadcrumb = $this->breadcrumb($two,$three);
+        return view('front.page',[
+            'article'=>htmlspecialchars_decode($articles['content']),
+            'breadcrumb'=>$breadcrumb
+        ]);
+    }
+
+    public function news_page( Request $request , $id , NewsArticleBusiness $articleBusiness)
+    {
+        $in = $request->all();
+        $articles = $articleBusiness->article( $id );
+        $two['url'] = "/news";
+        $two['name'] = "律师行业新闻";
+        $three['url'] = "/news?rel_type_id=".$articles['business_info']['id'];
+        $three['name'] = $articles['business_info']['name'];
+        $breadcrumb = $this->breadcrumb($two,$three);
+        return view('front.page',[
+            'article'=>htmlspecialchars_decode($articles['content']),
+            'breadcrumb'=>$breadcrumb
+        ]);
+    }
+
+    private function breadcrumb($two,$three)
+    {
+        $str  = "<ol class=\"breadcrumb\" style=\"margin-top: 10px; margin-bottom: 10px;\">";
+        $str .= "<li><a href='/'>首页</a></li>";
+        $str .= "<li><a class=\"active\" href=".$two['url'].">".$two['name']."</a></li>";
+        $str .= "<li><a class=\"active\" href=".$three['url'].">".$three['name']."</a></li>";
+        $str .= "</ol>";
+        return $str;
     }
 
     private function page_view($page,$page_num,$url)
