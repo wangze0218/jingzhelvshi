@@ -189,105 +189,18 @@
                         <small>每一份个案????????，每一位申请人都应该被认真对待。</small>
                     </h2>
                 </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>商品房买卖合同纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>二手房买卖纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
+                @foreach( $service as $k => $v )
+                    <div class="col-xs-6 col-sm-4">
+                        <div class="col-sm-12 service-item shadow text-center">
+                            <div class="col-sm-12 title">
+                                <h3>{{ $v->service_name }}</h3>
+                            </div>
+                            <div class="col-sm-12 title-describe">
+                                <p>{{ $v->topic }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>房产继承纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>期房买卖纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>租赁合同纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>婚姻共有房产分割</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>居间合同纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>房屋买卖纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="col-sm-12 service-item shadow text-center">
-                        <div class="col-sm-12 title">
-                            <h3>物业合同纠纷</h3>
-                        </div>
-                        <div class="col-sm-12 title-describe">
-                            {{--<p>每一位申请人都是独立的签证个案，我们从签证原理开始，为您定制最优方案。</p>--}}
-                            <p>每项家庭婚姻事务都是独一无二的，我们会以最大的诚意，最完美的解决委托人的烦恼。</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -305,15 +218,15 @@
                 <div class="col-sm-1"></div>
                 <div class="col-sm-6">
                     <address>
-                        <h3>{{$own['company_name']}}</h3>
-                        <p>地址：<span>{{$own['company_address']}}</span></p>
-                        <p>手机：<span>{{$own['company_tell']}}</span></p>
-                        <p>邮箱：<span>{{$own['company_email']}}</span></p>
+                        <h3>{{$company['company_name']}}</h3>
+                        <p>地址：<span>{{$company['company_address']}}</span></p>
+                        <p>手机：<span>{{$company['company_tell']}}</span></p>
+                        <p>邮箱：<span>{{$company['company_email']}}</span></p>
                     </address>
                 </div>
                 <div class="col-sm-5 about-describe">
                     <address>
-                        <p>{{$own['company_info']}}</p>
+                        <p>{{$company['company_info']}}</p>
                     </address>
 
                 </div>

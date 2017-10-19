@@ -43,6 +43,12 @@
                         <a onclick="return addOne('summary');" class="btn btn-primary ">加</a>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-xs-12 col-md-12" for="exampleInputEmail1">首页话题</label>
+                    <div class="col-xs-11 col-md-11" id="topic">
+                        <textarea name="topic" id="" cols="50" rows="4">{{$service['topic']}}</textarea>
+                    </div>
+                </div>
                 <div class="form-group" style="margin-top: 100px;">
                     <button type="submit" class="col-xs-12 col-md-12 btn btn-info">提交</button>
                 </div>

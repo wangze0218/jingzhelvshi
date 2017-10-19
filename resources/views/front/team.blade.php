@@ -58,9 +58,9 @@
                     <div class="article-title">
                         <h1 class="h2">{{ $own['team_name'] }}
                             <small class="visible-xs">
-                                <select name="" id="">
+                                <select name="" id="select">
                                     @foreach( $article_all_type as $k => $v )
-                                        <option value="{{$v['team_id']}}">{{$v['team_id']}}</option>
+                                        <option @if($v['team_id'] == $own['team_id']) selected @endif value="/team?rel_type_id={{$v['team_id']}}">{{$v['team_name']}}</option>
                                     @endforeach
                                 </select>
                             </small>

@@ -72,15 +72,15 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-6">
     <address>
-    <h3>{{$own['company_name']}}</h3>
-    <p>地址：<span>{{$own['company_address']}}</span></p>
-    <p>手机：<span>{{$own['company_tell']}}</span></p>
-    <p>邮箱：<span>{{$own['company_email']}}</span></p>
+    <h3>{{$company['company_name']}}</h3>
+    <p>地址：<span>{{$company['company_address']}}</span></p>
+    <p>手机：<span>{{$company['company_tell']}}</span></p>
+    <p>邮箱：<span>{{$company['company_email']}}</span></p>
     </address>
     </div>
     <div class="col-sm-5 about-describe">
     <address>
-    <p>{{$own['company_info']}}</p>
+    <p>{{$company['company_info']}}</p>
     </address>
 
     </div>

@@ -299,9 +299,9 @@
                     <div class="article-title">
                         <h1 class="h2">新闻
                             <small class="visible-xs">
-                                <select name="" id="">
+                                <select name="" id="select">
                                     @foreach( $article_all_type as $k => $v )
-                                        <option value="{{$v['news_id']}}">{{$v['news_id']}}</option>
+                                        <option @if($v['news_id'] == $own['news_id']) selected @endif value="/news?rel_type_id={{$v['news_id']}}">{{$v['news_name']}}</option>
                                     @endforeach
                                 </select>
                             </small>

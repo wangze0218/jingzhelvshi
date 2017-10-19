@@ -65,9 +65,9 @@
                     <div class="article-title">
                         <h1 class="h2">{{ $service['service_name'] }}
                             <small class="visible-xs">
-                                <select name="" id="">
+                                <select name="" id="select">
                                     @foreach( $article_all_type as $k => $v )
-                                        <option value="{{$v['service_id']}}">{{$v['service_name']}}</option>
+                                        <option @if($v['service_id'] == $service['service_id']) selected @endif value="/services?rel_type_id={{$v['service_id']}}">{{$v['service_name']}}</option>
                                     @endforeach
                                 </select>
                             </small>
@@ -109,10 +109,14 @@
                         </table>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+@endsection
+@section('script')
+    <script>
+
+    </script>
 @endsection
 
 

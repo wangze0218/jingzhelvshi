@@ -19,9 +19,11 @@ use App\Http\Controllers\Controller;
 
 class FrontController
 {
-    public function __construct()
-    {
+    private $company;
 
+    public function __construct( CompanyBusiness $companyBusiness )
+    {
+        $this->company = $companyBusiness->own();
     }
 
     public function service( Request $request , ServiceBusiness $serviceBusiness , ServiceArticleBusiness $articleBusiness )
@@ -43,7 +45,8 @@ class FrontController
             'service'=>$service,
             'list'=>$list,
             'page_view'=>$page_view,
-            'article_all_type'=>$article_all_type
+            'article_all_type'=>$article_all_type,
+            'company'=>$this->company
         ]);
     }
 
@@ -66,7 +69,8 @@ class FrontController
             'own'=>$own,
             'list'=>$list,
             'page_view'=>$page_view,
-            'article_all_type'=>$article_all_type
+            'article_all_type'=>$article_all_type,
+            'company'=>$this->company
         ]);
     }
 
@@ -89,26 +93,27 @@ class FrontController
             'own'=>$own,
             'list'=>$list,
             'page_view'=>$page_view,
-            'article_all_type'=>$article_all_type
+            'article_all_type'=>$article_all_type,
+            'company'=>$this->company
         ]);
     }
 
     public function company( CompanyBusiness $companyBusiness)
     {
         $own = $companyBusiness->own();
-        dd($own);
     }
 
     public function aboutUs( CompanyBusiness $companyBusiness)
     {
-        $own = $companyBusiness->own();
-        return view('front.about_us',['own'=>$own]);
+        $company = $this->company;
+        return view('front.about_us',['company'=>$company]);
     }
 
-    public function home( CompanyBusiness $companyBusiness)
+    public function home( CompanyBusiness $companyBusiness , ServiceBusiness $serviceBusiness)
     {
-        $own = $companyBusiness->own();
-        return view('front.home',['own'=>$own]);
+        $service = $serviceBusiness->serviceList([],1);
+        $company = $this->company;
+        return view('front.home',['service'=>$service['data'],'company'=>$company]);
     }
 
     public function service_page( Request $request , $id , ServiceArticleBusiness $articleBusiness)
@@ -122,7 +127,8 @@ class FrontController
         $breadcrumb = $this->breadcrumb($two,$three);
         return view('front.page',[
             'article'=>htmlspecialchars_decode($articles['content']),
-            'breadcrumb'=>$breadcrumb
+            'breadcrumb'=>$breadcrumb,
+            'company'=>$this->company
         ]);
     }
 
@@ -137,7 +143,8 @@ class FrontController
         $breadcrumb = $this->breadcrumb($two,$three);
         return view('front.page',[
             'article'=>htmlspecialchars_decode($articles['content']),
-            'breadcrumb'=>$breadcrumb
+            'breadcrumb'=>$breadcrumb,
+            'company'=>$this->company
         ]);
     }
 
@@ -152,7 +159,8 @@ class FrontController
         $breadcrumb = $this->breadcrumb($two,$three);
         return view('front.page',[
             'article'=>htmlspecialchars_decode($articles['content']),
-            'breadcrumb'=>$breadcrumb
+            'breadcrumb'=>$breadcrumb,
+            'company'=>$this->company
         ]);
     }
 

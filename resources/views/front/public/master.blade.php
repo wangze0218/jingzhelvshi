@@ -89,8 +89,15 @@
 </head>
 <body>
     @include('front.public.header')
+    @include('front.public.slider')
     @yield('content')
     @include('front.public.footer')
+    <script>
+        $('#select').change(function () {
+            var v = $(this).val();
+            location.href = v;
+        });
+    </script>
     @yield('script')
 </body>
 </html>
