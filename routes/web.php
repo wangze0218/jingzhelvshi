@@ -11,19 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.home');
-});
-Route::get('/about_us', function () {
-    return view('front.about_us');
-});
+Route::get('/company','Front\FrontController@company');
+Route::get('/about_us','Front\FrontController@aboutUs');
+Route::get('/','Front\FrontController@home');
 
 Route::get('/services','Front\FrontController@service');
 Route::get('/team','Front\FrontController@team');
 Route::get('/news','Front\FrontController@news');
+
 Route::get('/services/page/{id}','Front\FrontController@service_page');
 Route::get('/team/page/{id}','Front\FrontController@team_page');
 Route::get('/news/page/{id}','Front\FrontController@news_page');
+
 
 //
 //========================================================================================================
@@ -39,6 +38,8 @@ Route::group(['middleware' => 'BehindMiddleware'],function (){
     });
     //用户管理
     Route::resource('/behind/user','Behind\UserController');
+    //公司信息
+    Route::resource('/behind/company','Behind\CompanyController');
     //业务管理
     Route::resource('/behind/service','Behind\ServiceController');
     Route::resource('/behind/service_article','Behind\ServiceArticleController');

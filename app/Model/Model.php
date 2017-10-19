@@ -166,7 +166,7 @@ class Model extends EloquentModel
      */
     public static function findRecordOneCondition($where = [], $columns = ['*'], $order_by = [])
     {
-        if (empty($where)) return false;
+//        if (empty($where)) return false;
 
         $record = self::query();
 

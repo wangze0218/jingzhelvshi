@@ -305,17 +305,15 @@
                 <div class="col-sm-1"></div>
                 <div class="col-sm-6">
                     <address>
-                        <h3>京哲<span>房产 律师</span></h3>
-                        <p>地址：<span>北京大望路万达1号楼</span></p>
-                        <p>手机：<span>183-1031-7349</span></p>
-                        <p>邮箱：<span>xxxxxxxxxx@163.com</span></p>
+                        <h3>{{$own['company_name']}}</h3>
+                        <p>地址：<span>{{$own['company_address']}}</span></p>
+                        <p>手机：<span>{{$own['company_tell']}}</span></p>
+                        <p>邮箱：<span>{{$own['company_email']}}</span></p>
                     </address>
                 </div>
                 <div class="col-sm-5 about-describe">
                     <address>
-                        <p>
-                            律师事务所秉承“镇所之宝”——“申明执法为民、房系百姓冷暖”的宗旨，在孙洪林主任的率领下，律师团队大显身手，承办了成百上千的房地产案件，捧回了百余面赞誉的锦旗，兑现了为百姓提供专业房地产法律服务的承诺。
-                        </p>
+                        <p>{{$own['company_info']}}</p>
                     </address>
 
                 </div>

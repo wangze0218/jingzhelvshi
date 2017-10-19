@@ -13,6 +13,7 @@ use App\Business\TeamArticleBusiness;
 use App\Business\TeamBusiness;
 use App\Business\NewsArticleBusiness;
 use App\Business\NewsBusiness;
+use App\Business\CompanyBusiness;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -90,6 +91,24 @@ class FrontController
             'page_view'=>$page_view,
             'article_all_type'=>$article_all_type
         ]);
+    }
+
+    public function company( CompanyBusiness $companyBusiness)
+    {
+        $own = $companyBusiness->own();
+        dd($own);
+    }
+
+    public function aboutUs( CompanyBusiness $companyBusiness)
+    {
+        $own = $companyBusiness->own();
+        return view('front.about_us',['own'=>$own]);
+    }
+
+    public function home( CompanyBusiness $companyBusiness)
+    {
+        $own = $companyBusiness->own();
+        return view('front.home',['own'=>$own]);
     }
 
     public function service_page( Request $request , $id , ServiceArticleBusiness $articleBusiness)

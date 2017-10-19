@@ -44,6 +44,12 @@
                     <li><a  href="/behind/news_article">新闻内容管理</a></li>
                 </ul>
             </li>
+            <li class="sub-menu">
+                <a @if(\Request::path() == 'behind/company')class="active"@endif href="/behind/company" >
+                    <i class="icon-laptop"></i>
+                    <span>公司信息管理</span>
+                </a>
+            </li>
         </ul>
         <!-- sidebar menu end-->
     </div>
