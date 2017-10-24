@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>京哲律师</title>
+    <title>京哲房产律师网</title>
+    <meta name="keywords" content="商品房屋买卖纠纷 二手房屋买卖纠纷 房产继承纠纷 期房买卖纠纷 租赁合同纠纷 婚姻共有房产分割 居民合同纠纷 房屋买卖纠纷 物业合同纠纷" />
+    <meta name="description" content="北京市京哲律师事务所，是一家专注房产类案件的律师事务所，包括：商品房屋买卖纠纷、
+    二手房屋买卖纠纷、房产继承纠纷、期房买卖纠纷、租赁合同纠纷、婚姻共有房产分割、居民合同纠纷、房屋买卖纠纷、物业合同纠纷。" />
     @include('front.public.style')
     @yield('style')
     @include('front.public.script')
