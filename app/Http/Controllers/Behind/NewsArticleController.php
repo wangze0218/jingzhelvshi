@@ -66,7 +66,7 @@ class NewsArticleController
     public function edit($id)
     {
         $article = $this->articleBusiness->article($id);
-        $article->content = htmlspecialchars_decode($article->content);
+        $article['content'] = htmlspecialchars_decode($article['content']);
         $article_all_type = $this->articleBusiness->article_all_type();
         return view('behind.news_article.edit',['article'=>$article,'article_all_type'=>$article_all_type]);
     }

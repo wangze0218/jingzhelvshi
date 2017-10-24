@@ -45,13 +45,13 @@
                     @foreach($list['data'] as $k=>$v)
                         <tr>
                             <td><a href="#">{{$k+1}}</a></td>
-                            <td>{{$v->title}}</td>
-                            <td><img style="width: 100px;height: 30px;" src="{{$v->title_img}}" alt=""></td>
-                            <td>{{$v->title_describe}}</td>
+                            <td>{{$v['title']}}</td>
+                            <td><img style="width: 100px;height: 30px;" src="{{$v['title_img']}}" alt=""></td>
+                            <td>{{$v['title_describe']}}</td>
                             <td>
                                 {{--<button onclick="return remove('/behind/article/{{$v->article_id}}');" class="btn btn-danger btn-xs">查看</button>--}}
-                                <button onclick="return addOrEdit('/behind/team_article/{{$v->article_id}}/edit','团队人员编辑',['800px','800px']);" class="btn btn-primary btn-xs">编辑</button>
-                                <button onclick="return remove('/behind/team_article/{{$v->article_id}}');" class="btn btn-danger btn-xs">删除</button>
+                                <button onclick="return addOrEdit('/behind/team_article/{{$v['article_id']}}/edit','团队人员编辑',['800px','800px']);" class="btn btn-primary btn-xs">编辑</button>
+                                <button onclick="return remove('/behind/team_article/{{$v['article_id']}}');" class="btn btn-danger btn-xs">删除</button>
                             </td>
                         </tr>
                     @endforeach

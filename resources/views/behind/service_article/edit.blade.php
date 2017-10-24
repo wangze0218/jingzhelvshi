@@ -5,7 +5,7 @@
         <div class="col-md-12">
             <section class="panel">
                 <div class="panel-body">
-                    <form action="/behind/service_article/{{$article->article_id}}" role="form" id="from" method = 'post' onsubmit="return update('/behind/service_article/{{$article->article_id}}');" enctype="multipart/form-data" class="form-horizontal tasi-form">
+                    <form action="/behind/service_article/{{$article['article_id']}}" role="form" id="from" method = 'post' onsubmit="return update('/behind/service_article/{{$article['article_id']}}');" enctype="multipart/form-data" class="form-horizontal tasi-form">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="_method" value="PUT">
                         <div class="form-group">
@@ -13,7 +13,7 @@
                             <div class="col-md-4">
                                 <select class="colorpicker-default form-control" name="rel_type_id" id="">
                                     @foreach($article_all_type as $k=>$v)
-                                        <option @if($article->rel_type_id == $v['service_id']) selected @endif value="{{$v['service_id']}}">{{$v['service_name']}}</option>
+                                        <option @if($article['rel_type_id'] == $v['service_id']) selected @endif value="{{$v['service_id']}}">{{$v['service_name']}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -21,19 +21,19 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">标题</label>
                             <div class="col-md-4">
-                                <input type="text" name="title" class="colorpicker-default form-control" value="{{$article->title}}">
+                                <input type="text" name="title" class="colorpicker-default form-control" value="{{$article['title']}}">
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">标题详情</label>
                             <div class="col-md-4">
-                                <textarea name="title_describe" id="" cols="50" rows="4">{{$article->title_describe}}</textarea>
+                                <textarea name="title_describe" id="" cols="50" rows="4">{{$article['title_describe']}}</textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3">副标题详情</label>
                             <div class="col-md-4">
-                                <textarea name="vice_title_describe" id="" cols="50" rows="4">{{$article->vice_title_describe}}</textarea>
+                                <textarea name="vice_title_describe" id="" cols="50" rows="4">{{$article['vice_title_describe']}}</textarea>
                             </div>
                         </div>
                         <div class="form-group last">
@@ -44,7 +44,7 @@
                                         <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="">
                                     </div>
                                     <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;">
-                                        <img src="{{$article->title_img}}" alt="">
+                                        <img src="{{$article['title_img']}}" alt="">
                                     </div>
                                     <div>
                                         <span class="btn btn-white btn-file">
@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group">
                             <div class="container">
-                                <script id="editor" type="text/plain" style="width:1024px;height:500px;">{!! $article->content !!}</script>
+                                <script id="editor" type="text/plain" style="width:1024px;height:500px;">{!! $article['content'] !!}</script>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-default btn-lg btn-block">提交业务内容</button>
