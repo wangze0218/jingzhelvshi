@@ -274,7 +274,7 @@
             <div class="col-sm-12">
                 <ol class="breadcrumb" style="margin-top: 10px; margin-bottom: 10px;">
                     <li><a href="">首页</a></li>
-                    <li><a href="">律师行业新闻</a></li>
+                    <li><a href="">成功案例</a></li>
                 </ol>
             </div>
         </div>
@@ -288,7 +288,7 @@
                             <ul>
                                 @foreach( $article_all_type as $k => $v )
                                     <li>
-                                        <a @if($v['news_id'] == $own['news_id']) class="left-active" @endif  href="/news?rel_type_id={{$v['news_id']}}">{{$v['news_name']}}</a>
+                                        <a @if($v['cases_id'] == $own['cases_id']) class="left-active" @endif  href="/cases?rel_type_id={{$v['cases_id']}}">{{$v['cases_name']}}</a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -297,11 +297,11 @@
                 </div>
                 <div class="col-xs-12 col-sm-9 usinfo-article">
                     <div class="article-title">
-                        <h1 class="h2">{{ $own['news_name'] }}
+                        <h1 class="h2">{{ $own['cases_name'] }}
                             <small class="visible-xs">
                                 <select name="" id="select">
                                     @foreach( $article_all_type as $k => $v )
-                                        <option @if($v['news_id'] == $own['news_id']) selected @endif value="/news?rel_type_id={{$v['news_id']}}">{{$v['news_name']}}</option>
+                                        <option @if($v['cases_id'] == $own['cases_id']) selected @endif value="/cases?rel_type_id={{$v['cases_id']}}">{{$v['cases_name']}}</option>
                                     @endforeach
                                 </select>
                             </small>
@@ -310,18 +310,18 @@
                     @foreach( $list['data'] as $k => $v)
                         <div class="media our-news-item">
                             <div class="media-left">
-                                <a class="thumbnail" href="/news/page/{{$v['article_id']}}">
+                                <a class="thumbnail" href="/cases/page/{{$v['article_id']}}">
                                     <img class="media-object" src="{{ $v['title_img'] }}" alt="">
                                 </a>
                             </div>
                             <div class="media-body">
-                                <a href="/news/page/{{$v['article_id']}}"><h4>{{ $v['title'] }}</h4></a>
+                                <a href="/cases/page/{{$v['article_id']}}"><h4>{{ $v['title'] }}</h4></a>
                                 <div class="dynamic-li">
                                     <b></b><em class="pic-glob"></em><span>时间：{{ $v['created_at'] }} </span>
                                 </div>
                                 <p>{{  $v['title_describe'] }}</p>
                                 <div class="dynamic-li">
-                                    <a href="/news/page/{{$v['article_id']}}">[详细]</a>
+                                    <a href="/cases/page/{{$v['article_id']}}">[详细]</a>
                                     <span>作者：{{ $v['vice_title_describe'] }}</span>
                                 </div>
                             </div>

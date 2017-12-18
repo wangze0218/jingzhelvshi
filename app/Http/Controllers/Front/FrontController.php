@@ -13,6 +13,8 @@ use App\Business\TeamArticleBusiness;
 use App\Business\TeamBusiness;
 use App\Business\NewsArticleBusiness;
 use App\Business\NewsBusiness;
+use App\Business\CasesBusiness;
+use App\Business\CasesArticleBusiness;
 use App\Business\CompanyBusiness;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -98,6 +100,33 @@ class FrontController
         ]);
     }
 
+    public function cases( Request $request , CasesBusiness $business , CasesArticleBusiness $articleBusiness )
+    {
+        $in = $request->all();
+        $page = empty($in['page'])?1:$in['page'];
+
+        $article_type = $articleBusiness->article_type(empty($in['rel_type_id'])?'':$in['rel_type_id']);
+        $where = [
+            'rel_type_id'=>$article_type
+        ];
+        $page_size = 15;
+        $own = $business->own($article_type);
+        $list = $articleBusiness->articleList($where,$page,$page_size,['updated_at'=>'desc']);
+        $page_num = $list['page_num'];
+        $page_view = $this->page_view($page,$page_num,'/solution/');
+        $article_all_type = $articleBusiness->article_all_type();
+        return view('front.cases',[
+            'own'=>$own,
+            'list'=>$list,
+            'page_view'=>$page_view,
+            'article_all_type'=>$article_all_type,
+            'company'=>$this->company
+        ]);
+    }
+
+
+
+
     public function company( CompanyBusiness $companyBusiness)
     {
         $own = $companyBusiness->own();
@@ -155,6 +184,22 @@ class FrontController
         $two['url'] = "/news";
         $two['name'] = "律师行业新闻";
         $three['url'] = "/news?rel_type_id=".$articles['business_info']['id'];
+        $three['name'] = $articles['business_info']['name'];
+        $breadcrumb = $this->breadcrumb($two,$three);
+        return view('front.page',[
+            'article'=>htmlspecialchars_decode($articles['content']),
+            'breadcrumb'=>$breadcrumb,
+            'company'=>$this->company
+        ]);
+    }
+
+    public function cases_page( Request $request , $id , CasesArticleBusiness $articleBusiness)
+    {
+        $in = $request->all();
+        $articles = $articleBusiness->article( $id );
+        $two['url'] = "/cases";
+        $two['name'] = "成功案例";
+        $three['url'] = "/cases?rel_type_id=".$articles['business_info']['id'];
         $three['name'] = $articles['business_info']['name'];
         $breadcrumb = $this->breadcrumb($two,$three);
         return view('front.page',[

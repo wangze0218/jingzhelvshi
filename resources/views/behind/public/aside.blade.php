@@ -45,6 +45,16 @@
                 </ul>
             </li>
             <li class="sub-menu">
+                <a @if(\Request::path() == 'behind/cases')class="active"@endif  href="javascript:;">
+                    <i class="icon-laptop"></i>
+                    <span>案例管理</span>
+                </a>
+                <ul class="sub">
+                    <li><a  href="/behind/cases">案例类别管理</a></li>
+                    <li><a  href="/behind/cases_article">案例内容管理</a></li>
+                </ul>
+            </li>
+            <li class="sub-menu">
                 <a @if(\Request::path() == 'behind/company')class="active"@endif href="/behind/company" >
                     <i class="icon-laptop"></i>
                     <span>公司信息管理</span>

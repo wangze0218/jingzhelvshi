@@ -191,20 +191,103 @@
                 </div>
                 @foreach( $service as $k => $v )
                     <div class="col-xs-6 col-sm-4">
-                        <div class="col-sm-12 service-item shadow text-center">
-                            <div class="col-sm-12 title">
-                                <h3>{{ $v->service_name }}</h3>
-                            </div>
-                            <div class="col-sm-12 title-describe">
-                                <p>{{ $v->topic }}</p>
-                            </div>
-                        </div>
+                        <a href="/services?rel_type_id={{$v['service_id']}}" class="col-sm-12 service-item shadow text-center">
+                                <div class="col-sm-12 title">
+                                    <h3>{{ $v->service_name }}</h3>
+                                </div>
+                                <div class="col-sm-12 title-describe">
+                                    <p>{{ $v->topic }}</p>
+                                </div>
+                        </a>
+
                     </div>
                 @endforeach
             </div>
         </div>
+        <style>
+            .cases_title {
+                font-size: 32px;
+                font-weight: bold;
+                background-image: url(http://www.zjacls.com/skin/ance/images/h2line.jpg);
+                background-repeat: repeat-x;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                height: 38px;
+                line-height: 38px;
+            }
+            .cases_title span {
+                display: inline-block;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: #FFFFFF;
+            }
+            .cases ul {
+                margin-right: -50px;
+                height: 100%;
+                margin-bottom: 40px;
+            }
+
+            .cases li {
+                font-size: 14px;
+                line-height: 37px;
+                border-bottom: dotted #ddd 1px;
+                background-image: url(http://www.zjacls.com/skin/ance/images/36.gif);
+                background-repeat: no-repeat;
+                background-position: 0 center;
+                height: 37px;
+                overflow: hidden;
+                padding-left: 10px;
+                display: block;
+            }
+            a {
+                color: #666666;
+                text-decoration: none;
+            }
+            .cases li a {
+                display: block;
+                float: left;
+                width: 80%;
+            }
+            .cases li span {
+                float: right;
+                color: #999999;
+                font-size: 12px;
+            }
+        </style>
+        <div class="cases container">
+            <div class="row">
+                <h3 class="cases_title text-center"><span>最新成功案例</span></h3>
+                <ul class="col-sm-12">
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+                    <span class="col-sm-2"></span>
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+                    <span class="col-sm-2"></span>
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+                    <span class="col-sm-2"></span>
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+                    <span class="col-sm-2"></span>
+                    <li class="col-sm-5"><a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a><span>2017-10-24</span></li>
+                </ul>
+                {{--<a href="http://www.zjacls.com/aboutus/list.php?catid=89" class="btn-white box-sh15">更多成功案例<i class="s-fa">&gt;&gt;</i></a>--}}
+            </div>
+
+        </div>
     </div>
     {{--首页业务模块结束--}}
+
+
+
+
+
+
+
+
+
     {{--关于我们开始--}}
     <section id="about">
         <div class="container">

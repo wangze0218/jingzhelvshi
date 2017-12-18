@@ -52,7 +52,8 @@
             /*width: 56%;*/
         /*}*/
         .navbar-login{
-            margin-top: 3px;
+            margin-top: -45px;
+            float: right;
         }
     }
 </style>
@@ -72,7 +73,7 @@
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse col-sm-7" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse col-sm-8" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li @if(Request::path() == '/') class="active" @endif>
                         <a href="/">首页 <span class="sr-only">(current)</span></a>
@@ -87,8 +88,12 @@
                         @if(Request::path() == 'team') <p class="line-top hidden-xs"></p> @endif
                     </li>
                     <li @if(Request::path() == 'news') class="active" @endif>
-                        <a href="/news">律师行业新闻</a>
+                        <a href="/news">行业新闻</a>
                         @if(Request::path() == 'news') <p class="line-top hidden-xs"></p> @endif
+                    </li>
+                    <li @if(Request::path() == 'cases') class="active" @endif>
+                        <a href="/cases">成功案例</a>
+                        @if(Request::path() == 'cases') <p class="line-top hidden-xs"></p> @endif
                     </li>
                     <li @if(Request::path() == 'about_us') class="active" @endif>
                         <a href="/about_us">联系我们</a>
@@ -96,12 +101,13 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
-            <div class="navbar-login col-sm-2">
-                <ul class="nav pull-right hidden-xs">
-                    <li><a href="/sign_in" class="btn btn-default">登陆</a></li>
-                </ul>
-            </div>
+
+        </div>
+        <!-- /.navbar-collapse -->
+        <div class="navbar-login col-sm-1">
+            <ul class="nav pull-right hidden-xs">
+                <li><a href="/sign_in" class="btn btn-default">登陆</a></li>
+            </ul>
         </div>
         <!-- /.container-fluid -->
     </nav>

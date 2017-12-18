@@ -18,10 +18,12 @@ Route::get('/','Front\FrontController@home');
 Route::get('/services','Front\FrontController@service');
 Route::get('/team','Front\FrontController@team');
 Route::get('/news','Front\FrontController@news');
+Route::get('/cases','Front\FrontController@cases');
 
 Route::get('/services/page/{id}','Front\FrontController@service_page');
 Route::get('/team/page/{id}','Front\FrontController@team_page');
 Route::get('/news/page/{id}','Front\FrontController@news_page');
+Route::get('/cases/page/{id}','Front\FrontController@cases_page');
 
 
 //
@@ -49,4 +51,7 @@ Route::group(['middleware' => 'BehindMiddleware'],function (){
     //新闻管理
     Route::resource('/behind/news','Behind\NewsController');
     Route::resource('/behind/news_article','Behind\NewsArticleController');
+    //案例管理
+    Route::resource('/behind/cases','Behind\CasesController');
+    Route::resource('/behind/cases_article','Behind\CasesArticleController');
 });
