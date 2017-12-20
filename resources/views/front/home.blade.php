@@ -1,11 +1,32 @@
 @extends('front.public.master')
 @section('style')
     <style>
+        .headlines {
+            margin-top: 70px;
+            margin-bottom: 30px;
+            /*font-size: 32px;*/
+            font-weight: bold;
+            background-image: url(http://www.zjacls.com/skin/ance/images/h2line.jpg);
+            background-repeat: repeat-x;
+            /*margin-top: 80px;*/
+            /*margin-bottom: 40px;*/
+            height: 38px;
+            line-height: 38px;
+        }
+        .headlines span {
+            font-weight: 600;
+            display: inline-block;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #FFFFFF;
+        }
+    </style>
+    <style>
         @media screen and (min-width: 768px) {
             #services{
                 background-color: #ffffff;
                 /*background-color: #f5f5f5;*/
-                padding: 50px 0px 0px;
+                /*padding: 50px 0px 0px;*/
             }
             #carousel-example-generic{
                 width: 100%;
@@ -22,7 +43,7 @@
             #services{
                 /*background-color: #f5f5f5;*/
                 background-color: #ffffff;
-                padding: 50px 0px 0px;
+                /*padding: 50px 0px 0px;*/
             }
             #carousel-example-generic{
                 display: none;
@@ -59,9 +80,6 @@
             }
         }
         /*service*/
-        .index-row {
-            padding: 50px 0;
-        }
         .service-item{
             -webkit-transition: all 0.225s ease-in-out;
             -moz-transition: all 0.225s ease-in-out;
@@ -86,15 +104,12 @@
             margin: 20px auto;
             width: 90%;
         }
-        .service-item .title{
+        .service-item .service-item-title{
             border-bottom:1px solid #949494;
         }
-        .service-item:hover>.title,
-        .service-item:focus>.title{
+        .service-item:hover>.service-item-title,
+        .service-item:focus>.service-item-title{
             border-bottom:1px solid #fafafa ;
-        }
-        .service-title{
-            margin-bottom: 50px;
         }
         #about p{
             font-size: 15px;
@@ -102,7 +117,6 @@
 
         @media screen and (min-width: 768px) {
             #about {
-                padding: 50px 0 145px 0;
                 background-color: #ffffff;
                 /*background-color: #f5f5f5;*/
                 color: #363636;
@@ -130,7 +144,6 @@
             }
             #about {
                 border-top-width:60%;
-                padding: 155px 0 155px 0;
                 background-color: #ffffff;
                 /*background-color: #f5f5f5;*/
                 color: #363636;
@@ -140,6 +153,56 @@
             }
         }
     </style>
+    <style>
+        /*.cases{*/
+            /*padding: 50px 0px;*/
+        /*}*/
+
+        #news ul {
+            padding-left: 24px;
+            height: 100%;
+            margin-bottom: 40px;
+        }
+
+        #news li {
+            font-size: 14px;
+            line-height: 37px;
+            background-image: url(http://www.zjacls.com/skin/ance/images/36.gif);
+            background-repeat: no-repeat;
+            background-position: 0 center;
+            height: 39px;
+            overflow: hidden;
+            display: block;
+        }
+        #news li a{
+            width: 75%;
+            display: block;
+            float: left;
+            padding-left: 0px;
+        }
+        .cases li span{
+            width: 15%;
+            color: #999999;
+            font-size: 12px;
+        }
+        #news li p{
+            margin:0 0;
+            width: 90%;
+            border-bottom: dotted #ddd 1px;
+
+        }
+        a {
+            color: #666666;
+            text-decoration: none;
+        }
+        @media screen and (min-width: 768px) {
+
+        }
+        @media (max-width: 767px) {
+
+        }
+    </style>
+
 @endsection
 @section('content')
     {{--pc轮播--}}
@@ -177,25 +240,21 @@
     </div>
     {{--手机封面结束--}}
     {{--首页业务模块--}}
-    <div class="index-row" id="services">
-        <div class="container">
+    <div class="container" id="services">
+        <h1 class="headlines text-center"><span>专业领域</span></h1>
+        <div class="col-sm-12 text-center">
+            <h2>
+                <small>每一份个案????????，每一位申请人都应该被认真对待。</small>
+            </h2>
+        </div>
             <div class="row">
-                <div class="col-sm-12 text-center service-title">
-                    <h2 class="h1">专业领域</h2>
-
-                    <p style="margin:0 auto;width:80px;border-bottom: 2px solid #389bfa"></p>
-
-                    <h2>
-                        <small>每一份个案????????，每一位申请人都应该被认真对待。</small>
-                    </h2>
-                </div>
                 @foreach( $service as $k => $v )
                     <div class="col-xs-6 col-sm-4">
                         <a href="/services?rel_type_id={{$v['service_id']}}" class="col-sm-12 service-item shadow text-center">
-                                <div class="col-sm-12 title">
+                                <div class="col-sm-12 service-item-title">
                                     <h3>{{ $v->service_name }}</h3>
                                 </div>
-                                <div class="col-sm-12 title-describe">
+                                <div class="col-sm-12 service-item-describe">
                                     <p>{{ $v->topic }}</p>
                                 </div>
                         </a>
@@ -203,107 +262,41 @@
                     </div>
                 @endforeach
             </div>
+    </div>
+    <div class="container" id="news">
+        <h1 class="headlines text-center"><span>行业新闻</span></h1>
+        <div class="row">
+            <ul class="col-sm-12">
+                <li class="col-xs-12 col-sm-6">
+                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
+                    <span>2017-10-24</span>
+                    <p></p>
+                </li>
+                <li class="col-xs-12 col-sm-6">
+                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
+                    <span>2017-10-24</span>
+                    <p></p>
+                </li>
+                <li class="col-xs-12 col-sm-6">
+                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
+                    <span>2017-10-24</span>
+                    <p></p>
+                </li>
+                <li class="col-xs-12 col-sm-6">
+                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
+                    <span>2017-10-24</span>
+                    <p></p>
+                </li>
+            </ul>
+            {{--<a href="http://www.zjacls.com/aboutus/list.php?catid=89" class="btn-white box-sh15">更多成功案例<i class="s-fa">&gt;&gt;</i></a>--}}
         </div>
-        <style>
-            .cases{
-                padding: 50px 0px;
-            }
-            .cases_title {
-                font-size: 32px;
-                font-weight: bold;
-                background-image: url(http://www.zjacls.com/skin/ance/images/h2line.jpg);
-                background-repeat: repeat-x;
-                /*margin-top: 80px;*/
-                /*margin-bottom: 40px;*/
-                height: 38px;
-                line-height: 38px;
-            }
-            .cases_title span {
-                display: inline-block;
-                padding-left: 20px;
-                padding-right: 20px;
-                background-color: #FFFFFF;
-            }
-            .cases ul {
-                padding-left: 50px;
 
-                height: 100%;
-                margin-bottom: 40px;
-            }
-
-            .cases li {
-                font-size: 14px;
-                line-height: 37px;
-                background-image: url(http://www.zjacls.com/skin/ance/images/36.gif);
-                background-repeat: no-repeat;
-                background-position: 0 center;
-                height: 39px;
-                overflow: hidden;
-                display: block;
-            }
-            .cases li a{
-                width: 75%;
-                display: block;
-                float: left;
-                padding-left: 0px;
-            }
-            .cases li span{
-                width: 15%;
-                color: #999999;
-                font-size: 12px;
-            }
-            .cases li p{
-                margin:0 0;
-                width: 90%;
-                border-bottom: dotted #ddd 1px;
-
-            }
-            a {
-                color: #666666;
-                text-decoration: none;
-            }
-        </style>
-        <div class="cases container">
-            <div class="row">
-                <h3 class="cases_title text-center"><span>行业新闻</span></h3>
-                <ul class="col-sm-12">
-                    <li class="col-xs-12 col-sm-6">
-                        <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                        <span>2017-10-24</span>
-                        <p></p>
-                    </li>
-                    <li class="col-xs-12 col-sm-6">
-                        <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                        <span>2017-10-24</span>
-                        <p></p>
-                    </li>
-                    <li class="col-xs-12 col-sm-6">
-                        <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                        <span>2017-10-24</span>
-                        <p></p>
-                    </li>
-                    <li class="col-xs-12 col-sm-6">
-                        <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                        <span>2017-10-24</span>
-                        <p></p>
-                    </li>
-                </ul>
-                {{--<a href="http://www.zjacls.com/aboutus/list.php?catid=89" class="btn-white box-sh15">更多成功案例<i class="s-fa">&gt;&gt;</i></a>--}}
-            </div>
-
-        </div>
     </div>
     {{--首页业务模块结束--}}
     {{--关于我们开始--}}
-    <section id="about">
-        <div class="container">
-            <p class="line"></p>
-
-            <div class="title">
-                <h1 class="text-center">联系我们</h1>
-                <p style="margin:0 auto;width:80px;border-bottom: 2px solid #389bfa"></p>
-            </div>
-            <div class="row" style="padding: 20px 20px">
+    <div class="container" id="about">
+        <h1 class="headlines text-center"><span>关于我们</span></h1>
+            <div class="row">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-6">
                     <address>
@@ -320,8 +313,7 @@
 
                 </div>
             </div>
-        </div>
-    </section>
+    </div>
 @endsection
 
 
