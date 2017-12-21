@@ -267,26 +267,13 @@
         <h1 class="headlines text-center"><span>行业新闻</span></h1>
         <div class="row">
             <ul class="col-sm-12">
-                <li class="col-xs-12 col-sm-6">
-                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                    <span>2017-10-24</span>
-                    <p></p>
-                </li>
-                <li class="col-xs-12 col-sm-6">
-                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                    <span>2017-10-24</span>
-                    <p></p>
-                </li>
-                <li class="col-xs-12 col-sm-6">
-                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                    <span>2017-10-24</span>
-                    <p></p>
-                </li>
-                <li class="col-xs-12 col-sm-6">
-                    <a href="http://www.zjacls.com/aboutus/show.php?itemid=127">明明未借到钱，怎就成了被告？</a>
-                    <span>2017-10-24</span>
-                    <p></p>
-                </li>
+                @foreach( $news as $k => $v )
+                    <li class="col-xs-12 col-sm-6">
+                        <a href="/news/page/{{$v['article_id']}}">{{$v['title_describe']}}</a>
+                        <span>{{date('Y-m-d',strtotime($v['created_at']))}}</span>
+                        <p></p>
+                    </li>
+                @endforeach
             </ul>
             {{--<a href="http://www.zjacls.com/aboutus/list.php?catid=89" class="btn-white box-sh15">更多成功案例<i class="s-fa">&gt;&gt;</i></a>--}}
         </div>

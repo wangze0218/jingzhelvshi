@@ -40,4 +40,9 @@ class NewsArticleBusiness extends ArticleBusinessAbstract
             return $type_ids[0];
         }
     }
+
+    public function article_types()
+    {
+        return $type_ids = NewsModel::getRecordLists([],'news_id')->toArray();
+    }
 }

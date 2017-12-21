@@ -25,6 +25,8 @@ class Model extends EloquentModel
      */
     public static function orginationQuery($where,$record){
         if(empty($where)) return $record;
+
+
         foreach ($where as $field=>$value){
             $where_like = [];
             if(!is_array($value)){
@@ -33,7 +35,7 @@ class Model extends EloquentModel
             }
             $operate = array_keys($value)[0];//得到操作数
             $operate_value = $value[$operate];
-            switch (strtolower($operate)){
+            switch ($operate){
                 case "like":
                     $where_like[$field] = $operate_value;
                     break;
@@ -42,6 +44,9 @@ class Model extends EloquentModel
                     break;
                 case "whereNotIn":
                     $record->whereNotIn($field, $operate_value);
+                    break;
+                case "whereIn":
+                    $record->whereIn($field, $operate_value);
                     break;
                 case "or":
                     $record->where(function ($query) use ($field,$operate_value){
@@ -277,7 +282,6 @@ class Model extends EloquentModel
 //        if(empty($where)){
 //            return false;
 //        }
-
         $record = self::query();
 
         $record = self::orginationQuery($where,$record);

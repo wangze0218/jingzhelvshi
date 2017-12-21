@@ -138,11 +138,14 @@ class FrontController
         return view('front.about_us',['company'=>$company]);
     }
 
-    public function home( CompanyBusiness $companyBusiness , ServiceBusiness $serviceBusiness)
+    public function home( CompanyBusiness $companyBusiness , ServiceBusiness $serviceBusiness,NewsArticleBusiness $newsArticle)
     {
         $service = $serviceBusiness->serviceList([],1);
+        $news_type = $newsArticle->article_types();
+        $where = ['rel_type_id'=>['whereIn'=>$news_type]];
+        $news = $newsArticle->articleList($where,1,10,['updated_at'=>'desc']);
         $company = $this->company;
-        return view('front.home',['service'=>$service['data'],'company'=>$company]);
+        return view('front.home',['service'=>$service['data'],'company'=>$company,'news'=>$news['data']]);
     }
 
     public function service_page( Request $request , $id , ServiceArticleBusiness $articleBusiness)
