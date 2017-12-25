@@ -68,8 +68,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style="padding:0 0 0 15px;" href="">
-                    <img alt="Brand" style="max-width:203px;" src="/jingzhefangchanlvshi.png">
+                <a class="navbar-brand" style="padding: 12px 0 0 15px;" href="">
+                    <img alt="Brand" style="max-width:203px;" src="/deshengfangchanlvshi.jpg">
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
