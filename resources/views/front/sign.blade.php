@@ -93,9 +93,9 @@
                         </div>
                         <div class="form-group">
                             <label for="remember" class="check-cont">
-                                <input id="remember" name="remmber" class="hidden" type="checkbox">
-                                <span id="remember_span"></span>
-                                Remember me
+                                {{--<input id="remember" name="remmber" class="hidden" type="checkbox">--}}
+                                {{--<span id="remember_span"></span>--}}
+                                {{--Remember me--}}
                             </label>
 
                         </div>
@@ -105,7 +105,7 @@
                     </form>
                 </div>
                 <div class="row form-group text-center">
-                    Copyright © 2017  <a href="http://www.zaarapp.com/"> ZAAR Technologies</a>
+                    Copyright © 德胜房产律师  <a href="http://www.zaarapp.com/"> </a>
                 </div>
             </div>
         </div>

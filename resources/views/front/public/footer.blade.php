@@ -103,8 +103,9 @@
         <div class="row">
             <div class="col-sm-12">
                 <span>Copyright © <a href="http://www.ghostchina.com/">德胜房产律师</a></span> |
-                <span><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备11008151号</a></span> |
-                <span>京公网安备11010802014853</span>
+                <span><a href="http://www.miibeian.gov.cn/" target="_blank">	京ICP备15025126号-8</a></span>
+                {{--|--}}
+                {{--<span>京公网安备11010802014853</span>--}}
             </div>
         </div>
     </div>
