@@ -14,7 +14,7 @@ use App\System\ResponseException;
 class FileBusiness
 {
     private $old_file_path;
-    private $new_file_path = '/var/www/jingzhelvshi/public/img';
+    private $new_file_path = '/var/www/img';
     private $extension;
 
     public function __construct()
@@ -51,7 +51,7 @@ class FileBusiness
             $new_file_url = $this->new_file_path.'/'.$new_file_name;
             $this->new_myfile($new_file_url,$orl_myfile);
             unlink($old_file_path);
-            return '/img/'.$new_file_name;
+            return '../../img/'.$new_file_name;
         }else{
             return false;
         }

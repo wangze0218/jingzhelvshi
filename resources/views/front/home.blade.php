@@ -191,7 +191,10 @@
             border-bottom: dotted #ddd 1px;
 
         }
-
+        /*a {*/
+                     /*color: #666666;*/
+                     /*text-decoration: none;*/
+                 /*}*/
         @media screen and (min-width: 768px) {
 
         }
