@@ -250,7 +250,7 @@
             <div class="row">
                 @foreach( $service as $k => $v )
                     <div class="col-xs-6 col-sm-4">
-                        <a href="/services?rel_type_id={{$v['service_id']}}" class="col-sm-12 service-item shadow text-center">
+                        <a  target="_self" href="/services?rel_type_id={{$v['service_id']}}" class="col-sm-12 service-item shadow text-center">
                                 <div class="col-sm-12 service-item-title">
                                     <h3>{{ $v->service_name }}</h3>
                                 </div>
@@ -269,7 +269,7 @@
             <ul class="col-sm-12">
                 @foreach( $news as $k => $v )
                     <li class="col-xs-12 col-sm-6">
-                        <a href="/news/page/{{$v['article_id']}}">{{$v['title_describe']}}</a>
+                        <a target="_self" href="/news/page/{{$v['article_id']}}">{{$v['title_describe']}}</a>
                         <span>{{date('Y-m-d',strtotime($v['created_at']))}}</span>
                         <p></p>
                     </li>
