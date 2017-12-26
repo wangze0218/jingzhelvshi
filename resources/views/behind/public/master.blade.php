@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Mosaddek">
-    <meta name="keyword" content="京哲房产律师 后台">
+    <meta name="keyword" content="德盛房产律师 后台">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>京哲房产律师 后台</title>
+    <title>德盛房产律师 后台</title>
     @include('behind.public.style')
     @yield('style')
     <script src="{{asset('FlatLab/js/html5shiv.js')}}"></script>

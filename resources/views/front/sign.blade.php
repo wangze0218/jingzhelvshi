@@ -76,7 +76,8 @@
         <div class="container">
                 <div class="row sing_bg text-center">
                     <a href="#">
-                        <img src="/jingzhefangchanlvshi.png" alt="logo">
+                        {{--<img src="/jingzhefangchanlvshi.png" alt="logo">--}}
+                        <img src="/deshengfangchanlvshi.jpg" alt="logo">
                     </a>
                 </div>
                 <div class="row">

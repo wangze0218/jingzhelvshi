@@ -6,7 +6,7 @@
             margin-bottom: 30px;
             /*font-size: 32px;*/
             font-weight: bold;
-            background-image: url(http://www.zjacls.com/skin/ance/images/h2line.jpg);
+            background-image: url(/img/h2line.jpg);
             background-repeat: repeat-x;
             /*margin-top: 80px;*/
             /*margin-bottom: 40px;*/
@@ -167,7 +167,7 @@
         #news li {
             font-size: 14px;
             line-height: 37px;
-            background-image: url(http://www.zjacls.com/skin/ance/images/36.gif);
+            background-image: url(/img/36.gif);
             background-repeat: no-repeat;
             background-position: 0 center;
             height: 39px;
