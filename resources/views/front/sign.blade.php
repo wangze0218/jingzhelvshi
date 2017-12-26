@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>华云数海</title>
+    <title>德盛房产律师</title>
     @include('front.public.style')
     <style>
         .container{
