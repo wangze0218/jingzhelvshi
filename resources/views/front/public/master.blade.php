@@ -9,6 +9,10 @@
     @yield('style')
     @include('front.public.script')
     <style>
+        a {
+            color: #666666;
+            text-decoration: none;
+        }
         html,body{
             height:100%;
         }
